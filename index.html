@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Really Happened — Master Trauma Education Platform</title>
+  <meta name="description" content="The complete trauma education platform: 30-session WRH Pilot curriculum, 17-session psychoeducation series, 26 Laws of Survival, glossary, and facilitator tools.">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #12121a;
+      --bg3: #1a1a26;
+      --border: #2a2a3e;
+      --accent: #c8a96e;
+      --accent2: #7c6fe0;
+      --accent3: #4ecdc4;
+      --text: #e8e8f0;
+      --text2: #a0a0b8;
+      --text3: #6a6a88;
+      --red: #e05555;
+      --green: #55c47a;
+      --yellow: #e0c055;
+      --card-bg: #14141e;
+      --card-hover: #1e1e2e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0a0a0f 0%, #12121a 50%, #1a1020 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+    .logo span { color: var(--text2); font-weight: normal; font-size: 0.85rem; margin-left: 8px; }
+    nav { display: flex; gap: 4px; }
+    nav a {
+      color: var(--text2);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-family: 'Arial', sans-serif;
+      transition: all 0.2s;
+    }
+    nav a:hover, nav a.active { background: var(--bg3); color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, #0a0a0f 0%, #0f0f1a 60%, #12121a 100%);
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(200,169,110,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,169,110,0.1);
+      border: 1px solid rgba(200,169,110,0.3);
+      color: var(--accent);
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-family: 'Arial', sans-serif;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--text);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text2);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      font-family: 'Arial', sans-serif;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; color: var(--accent); font-weight: bold; }
+    .stat-label { font-size: 0.8rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; font-family: 'Arial', sans-serif; }
+
+    /* MAIN LAYOUT */
+    .main { max-width: 1400px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* SECTION HEADERS */
+    .section-header {
+      padding: 48px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    .section-header h2 {
+      font-size: 1.8rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .section-header h2 .tag {
+      font-size: 0.7rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 2px 10px;
+      border-radius: 4px;
+      vertical-align: middle;
+      margin-left: 12px;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .section-header p { color: var(--text2); font-size: 0.95rem; font-family: 'Arial', sans-serif; }
+
+    /* GRID LAYOUTS */
+    .sessions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+    .laws-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+    /* SESSION CARDS */
+    .session-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .session-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .session-card:hover { background: var(--card-hover); border-color: var(--accent2); transform: translateY(-2px); }
+    .session-card:hover::before { opacity: 1; }
+    .session-num {
+      font-size: 0.7rem;
+      color: var(--text3);
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .session-title { font-size: 1rem; color: var(--text); margin-bottom: 4px; font-weight: bold; }
+    .session-subtitle { font-size: 0.85rem; color: var(--accent); margin-bottom: 10px; font-family: 'Arial', sans-serif; }
+    .session-goal { font-size: 0.82rem; color: var(--text2); font-family: 'Arial', sans-serif; line-height: 1.5; }
+    .session-meta {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    .badge-arc { background: rgba(124,111,224,0.15); color: var(--accent2); border: 1px solid rgba(124,111,224,0.3); }
+    .badge-dur { background: rgba(78,205,196,0.1); color: var(--accent3); border: 1px solid rgba(78,205,196,0.3); }
+    .badge-series { background: rgba(200,169,110,0.1); color: var(--accent); border: 1px solid rgba(200,169,110,0.3); }
+
+    /* LAW CARDS */
+    .law-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: relative;
+    }
+    .law-card:hover { background: var(--card-hover); border-color: var(--accent); transform: translateY(-2px); }
+    .law-num {
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .law-title { font-size: 0.95rem; color: var(--text); margin-bottom: 8px; font-weight: bold; }
+    .law-quote {
+      font-size: 0.85rem;
+      color: var(--text2);
+      font-style: italic;
+      border-left: 2px solid var(--accent);
+      padding-left: 12px;
+      margin-bottom: 10px;
+    }
+    .law-content { font-size: 0.8rem; color: var(--text3); font-family: 'Arial', sans-serif; line-height: 1.5; }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 2000;
+      overflow-y: auto;
+      padding: 40px 20px;
+    }
+    .modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+    .modal {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      animation: modalIn 0.3s ease;
+    }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .modal-close:hover { background: var(--red); color: white; border-color: var(--red); }
+    .modal-tag { font-size: 0.7rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; font-family: 'Arial', sans-serif; margin-bottom: 12px; }
+    .modal h2 { font-size: 1.6rem; color: var(--text); margin-bottom: 6px; }
+    .modal-subtitle { font-size: 1rem; color: var(--accent); margin-bottom: 20px; font-family: 'Arial', sans-serif; }
+    .modal-goal {
+      background: var(--bg3);
+      border-left: 3px solid var(--accent2);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      color: var(--text2);
+      font-family: 'Arial', sans-serif;
+    }
+    .modal-goal strong { color: var(--accent2); }
+    .modal-section { margin-bottom: 24px; }
+    .modal-section h3 { font-size: 1rem; color: var(--accent3); margin-bottom: 10px; font-family: 'Arial', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.8rem; }
+    .modal-section p { color: var(--text2); font-size: 0.9rem; font-family: 'Arial', sans-serif; line-height: 1.7; margin-bottom: 8px; }
+    .modal-section ul { list-style: none; padding: 0; }
+    .modal-section ul li { color: var(--text2); font-size: 0.9rem; font-family: 'Arial', sans-serif; padding: 4px 0 4px 16px; position: relative; }
+    .modal-section ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+    .modal-quote {
+      background: rgba(200,169,110,0.05);
+      border: 1px solid rgba(200,169,110,0.2);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-style: italic;
+      color: var(--text);
+      font-size: 1rem;
+      margin: 16px 0;
+    }
+    .modal-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+
+    /* GLOSSARY */
+    .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+    .glossary-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      transition: all 0.2s;
+    }
+    .glossary-card:hover { border-color: var(--accent3); background: var(--card-hover); }
+    .glossary-term { font-size: 0.9rem; color: var(--accent3); font-weight: bold; margin-bottom: 6px; font-family: 'Arial', sans-serif; }
+    .glossary-def { font-size: 0.82rem; color: var(--text2); font-family: 'Arial', sans-serif; line-height: 1.5; }
+
+    /* TOOLS SECTION */
+    .tool-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.25s;
+    }
+    .tool-card:hover { border-color: var(--accent2); background: var(--card-hover); }
+    .tool-icon { font-size: 1.5rem; margin-bottom: 12px; }
+    .tool-title { font-size: 1rem; color: var(--text); font-weight: bold; margin-bottom: 6px; }
+    .tool-desc { font-size: 0.85rem; color: var(--text2); font-family: 'Arial', sans-serif; line-height: 1.5; }
+
+    /* FILTER BAR */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .filter-btn {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-family: 'Arial', sans-serif;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent2); border-color: var(--accent2); color: white; }
+
+    /* SEARCH */
+    .search-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .search-input {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: 'Arial', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: var(--accent2); }
+    .search-input::placeholder { color: var(--text3); }
+
+    /* REGULATION TOOL */
+    .regulation-tool {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .reg-title { font-size: 1rem; color: var(--accent3); margin-bottom: 16px; font-family: 'Arial', sans-serif; font-weight: bold; }
+    .reg-steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    .reg-step {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+    }
+    .reg-step-num { font-size: 1.5rem; color: var(--accent); font-weight: bold; margin-bottom: 4px; }
+    .reg-step-text { font-size: 0.82rem; color: var(--text2); font-family: 'Arial', sans-serif; }
+    .reg-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent2), #5a4fc0);
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      margin-top: 16px;
+      font-family: 'Arial', sans-serif;
+      transition: opacity 0.2s;
+    }
+    .reg-btn:hover { opacity: 0.85; }
+
+    /* PROGRESS TRACKER */
+    .progress-section {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .progress-title { font-size: 0.9rem; color: var(--text2); font-family: 'Arial', sans-serif; margin-bottom: 12px; }
+    .progress-bar-wrap { background: var(--bg2); border-radius: 4px; height: 8px; margin-bottom: 8px; overflow: hidden; }
+    .progress-bar { height: 100%; background: linear-gradient(90deg, var(--accent2), var(--accent)); border-radius: 4px; transition: width 0.5s; }
+    .progress-label { font-size: 0.75rem; color: var(--text3); font-family: 'Arial', sans-serif; }
+
+    /* SAFETY BANNER */
+    .safety-banner {
+      background: rgba(224,85,85,0.08);
+      border: 1px solid rgba(224,85,85,0.25);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .safety-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .safety-text { font-size: 0.85rem; color: var(--text2); font-family: 'Arial', sans-serif; line-height: 1.6; }
+    .safety-text strong { color: var(--red); }
+    .safety-text a { color: var(--accent); text-decoration: none; }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-text { font-size: 0.82rem; color: var(--text3); font-family: 'Arial', sans-serif; line-height: 1.7; }
+    .footer-text a { color: var(--accent); text-decoration: none; }
+
+    /* TABS */
+    .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 24px; overflow-x: auto; }
+    .tab {
+      padding: 10px 18px;
+      font-size: 0.85rem;
+      font-family: 'Arial', sans-serif;
+      color: var(--text2);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hero { padding: 48px 16px 40px; }
+      .hero-stats { gap: 24px; }
+      .main { padding: 0 16px 60px; }
+      .sessions-grid, .laws-grid { grid-template-columns: 1fr; }
+      .modal { padding: 24px; }
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+    /* ANCHOR LINKS */
+    .anchor-link { scroll-margin-top: 80px; }
+
+    /* BREATHING ANIMATION */
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+    .breathe-circle {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,111,224,0.4), rgba(124,111,224,0.1));
+      border: 2px solid var(--accent2);
+      margin: 20px auto;
+      animation: breathe 4s ease-in-out infinite;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; color: var(--accent2); font-family: 'Arial', sans-serif;
+      cursor: pointer;
+    }
+    #breathe-text { font-size: 0.8rem; color: var(--text2); font-family: 'Arial', sans-serif; text-align: center; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">WRH <span>Master Platform</span></a>
+    <nav>
+      <a href="#sessions-wrh" class="nav-link">WRH Pilot</a>
+      <a href="#sessions-series" class="nav-link">Series</a>
+      <a href="#laws" class="nav-link">26 Laws</a>
+      <a href="#glossary" class="nav-link">Glossary</a>
+      <a href="#tools" class="nav-link">Tools</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Complete Trauma Education Platform</div>
+  <h1><em>What Really Happened</em></h1>
+  <p class="hero-sub">The complete combined curriculum — sessions, lectures, laws, and tools drawn from every repository. No coddling. No bullshit. Just the mechanism.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">30</div><div class="stat-label">WRH Pilot Sessions</div></div>
+    <div class="stat"><div class="stat-num">17</div><div class="stat-label">Series Sessions</div></div>
+    <div class="stat"><div class="stat-num">26</div><div class="stat-label">Laws of Survival</div></div>
+    <div class="stat"><div class="stat-num">14</div><div class="stat-label">Glossary Terms</div></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- SAFETY BANNER -->
+  <div class="safety-banner">
+    <div class="safety-icon">⚠</div>
+    <div class="safety-text">
+      <strong>Crisis Resources:</strong> If you are in crisis, call or text <strong>988</strong> (Suicide & Crisis Lifeline) or text HOME to <strong>741741</strong> (Crisis Text Line). This platform is educational — not a substitute for clinical care.
+      <br>Yellow Light: Feel the edge? Feet on the floor, breathe out slowly. Red Light: Step away. No explanation needed.
+    </div>
+  </div>
+
+  <!-- TABS NAVIGATION -->
+  <div class="tabs" id="main-tabs">
+    <div class="tab active" onclick="switchTab('tab-wrh')">WRH Pilot (30 Sessions)</div>
+    <div class="tab" onclick="switchTab('tab-series')">Series (17 Sessions)</div>
+    <div class="tab" onclick="switchTab('tab-laws')">26 Laws of Survival</div>
+    <div class="tab" onclick="switchTab('tab-glossary')">Glossary</div>
+    <div class="tab" onclick="switchTab('tab-tools')">Facilitator Tools</div>
+  </div>
+
+  <!-- TAB: WRH PILOT -->
+  <div id="tab-wrh" class="tab-content active anchor-link" id="sessions-wrh">
+    <div class="section-header">
+      <h2>WRH 30-Session Pilot Curriculum <span class="tag">Full Program</span></h2>
+      <p>The complete 30-session "What Really Happened" pilot deployment — from intake through integrated system. Thriller-style psychoeducation built for jails, VA peer groups, residential rehabs, and community settings.</p>
+    </div>
+
+    <div class="filter-bar" id="wrh-filters">
+      <button class="filter-btn active" onclick="filterWRH('all', this)">All Sessions</button>
+      <button class="filter-btn" onclick="filterWRH('arc1', this)">Arc 1: The Machine</button>
+      <button class="filter-btn" onclick="filterWRH('arc2', this)">Arc 2: The Drivers</button>
+      <button class="filter-btn" onclick="filterWRH('arc3', this)">Arc 3: The Interrupt</button>
+      <button class="filter-btn" onclick="filterWRH('arc4', this)">Arc 4: The Rebuild</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search sessions by title or keyword..." oninput="searchSessions(this.value, 'wrh')">
+    </div>
+
+    <div class="sessions-grid" id="wrh-grid"></div>
+  </div>
+
+  <!-- TAB: SERIES -->
+  <div id="tab-series" class="tab-content anchor-link" id="sessions-series">
+    <div class="section-header">
+      <h2>What Really Happened — Education Series <span class="tag">17 Sessions</span></h2>
+      <p>The original 17-session psychoeducation series. 75-minute sessions designed for NA/AA rooms, jails, residential rehabs, and VA peer groups. From the Load-Bearing Belief to the Revolution Must Be Trauma-Informed.</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search series sessions..." oninput="searchSessions(this.value, 'series')">
+    </div>
+
+    <div class="sessions-grid" id="series-grid"></div>
+  </div>
+
+  <!-- TAB: 26 LAWS -->
+  <div id="tab-laws" class="tab-content anchor-link" id="laws">
+    <div class="section-header">
+      <h2>The 26 Laws of Survival <span class="tag">The Wounded Blueprint</span></h2>
+      <p>A clinical map of Complex PTSD drawn from lived experience. Each law is a survival mechanism — not a flaw. From "Survival Is Wiring, Not Weakness" to "You Are Not Your Trauma; You Are What You Do With It."</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search laws..." oninput="searchLaws(this.value)">
+    </div>
+
+    <div class="laws-grid" id="laws-grid"></div>
+  </div>
+
+  <!-- TAB: GLOSSARY -->
+  <div id="tab-glossary" class="tab-content anchor-link" id="glossary">
+    <div class="section-header">
+      <h2>WRH Glossary <span class="tag">Terminology</span></h2>
+      <p>The unified language of the WRH curriculum. These definitions are used consistently across all sessions so the program retains a unified instructional voice.</p>
+    </div>
+    <div class="glossary-grid" id="glossary-grid"></div>
+  </div>
+
+  <!-- TAB: TOOLS -->
+  <div id="tab-tools" class="tab-content anchor-link" id="tools">
+    <div class="section-header">
+      <h2>Facilitator & Participant Tools <span class="tag">Operational</span></h2>
+      <p>Regulation tools, safety protocols, and facilitator resources drawn from the full WRH curriculum.</p>
+    </div>
+
+    <!-- BREATHING TOOL -->
+    <div class="regulation-tool">
+      <div class="reg-title">Regulation Tool: Box Breathing (4-4-6)</div>
+      <div class="breathe-circle" id="breathe-circle" onclick="startBreathing()">Start</div>
+      <div id="breathe-text">Click the circle to begin guided breathing</div>
+      <div class="reg-steps">
+        <div class="reg-step"><div class="reg-step-num">1</div><div class="reg-step-text">Feet flat on the floor</div></div>
+        <div class="reg-step"><div class="reg-step-num">2</div><div class="reg-step-text">One hand on chest, one on belly</div></div>
+        <div class="reg-step"><div class="reg-step-num">3</div><div class="reg-step-text">In for 4 — hold for 4 — out for 6</div></div>
+        <div class="reg-step"><div class="reg-step-num">4</div><div class="reg-step-text">Notice the room. You are safe right now.</div></div>
+      </div>
+    </div>
+
+    <!-- PLAN B TOOL -->
+    <div class="regulation-tool">
+      <div class="reg-title">Plan B Protocol — When Material Gets Heavy</div>
+      <div class="reg-steps">
+        <div class="reg-step" style="border-left: 3px solid var(--yellow);">
+          <div class="reg-step-num" style="color: var(--yellow);">🟡</div>
+          <div class="reg-step-text"><strong style="color: var(--yellow);">Yellow Light</strong> — Mildly activated<br>Press heels into floor. Name 5 blue things. Voo breath (low "vooo" on exhale).</div>
+        </div>
+        <div class="reg-step" style="border-left: 3px solid var(--red);">
+          <div class="reg-step-num" style="color: var(--red);">🔴</div>
+          <div class="reg-step-text"><strong style="color: var(--red);">Red Light</strong> — Flooded<br>Step out. No need to ask. Splash cold water on face. Walk briskly. Return when ready.</div>
+        </div>
+        <div class="reg-step" style="border-left: 3px solid var(--green);">
+          <div class="reg-step-num" style="color: var(--green);">🟢</div>
+          <div class="reg-step-text"><strong style="color: var(--green);">Green Light</strong> — Regulated<br>Feet on floor. Slow breath. Eyes open. You are in control of this room.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FACILITATOR RULES -->
+    <div class="regulation-tool">
+      <div class="reg-title">Facilitator Core Rules</div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon">⏸</div>
+          <div class="tool-title">PAUSE</div>
+          <div class="tool-desc">Count to 3 silently after any reframe or key line. Let it land before moving on.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🔉</div>
+          <div class="tool-title">DROP</div>
+          <div class="tool-desc">Lower your voice on the second half of an important sentence. The drop signals weight.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🫁</div>
+          <div class="tool-title">BREATHE</div>
+          <div class="tool-desc">Take one slow breath before starting the rapid reframes. Model regulation.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">👁</div>
+          <div class="tool-title">EYES</div>
+          <div class="tool-desc">Look at one person (not the whole room) when asking a mirror question. Create contact.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🚫</div>
+          <div class="tool-title">HARD LIMIT</div>
+          <div class="tool-desc">No more than 2 sessions back-to-back. Period. Your nervous system matters too.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📝</div>
+          <div class="tool-title">DECOMPRESSION</div>
+          <div class="tool-desc">After each session: write one thing you noticed. Shake out hands. Drink water. Leave the session there.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESS TRACKER -->
+    <div class="progress-section">
+      <div class="reg-title">Session Progress Tracker</div>
+      <div id="progress-tracker"></div>
+    </div>
+
+    <!-- DECOMPRESSION PROTOCOL -->
+    <div class="regulation-tool">
+      <div class="reg-title">Facilitator Decompression Protocol</div>
+      <div class="modal-quote">"After each session, take 5 minutes alone. Write down one thing you noticed about the room — not to fix, just to see. Then shake out your hands, drink water, and leave the session there. You are not responsible for their healing. You are responsible for the container."</div>
+      <div class="tool-desc" style="color: var(--text2); font-family: 'Arial', sans-serif; font-size: 0.85rem;">Hard limit: No more than 2 sessions back-to-back. Schedule decompression time as a non-negotiable operational requirement, not a luxury.</div>
+    </div>
+
+    <!-- PRE/POST SURVEY -->
+    <div class="regulation-tool">
+      <div class="reg-title">Pre/Post Session Survey (Rate 1–5)</div>
+      <div id="survey-form"></div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-text">
+      <strong style="color: var(--accent);">What Really Happened — Master Trauma Education Platform</strong><br>
+      Built from the complete GitHub repository collection of Daniel Lingar (Mave9055).<br>
+      Curriculum: WRH Pilot Deployment Package · What Really Happened Series · 26 Laws of Survival · CPTSD-Straight-Facts<br>
+      <br>
+      Crisis: <a href="tel:988">988</a> · Text HOME to <a href="sms:741741">741741</a> · <a href="https://www.crisistextline.org" target="_blank">crisistextline.org</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+
+const WRH_SESSIONS = [
+  { num: 0, title: "Welcome, Safety, and Why This Course Exists", subtitle: "Intake Session", arc: "intake", arcLabel: "Intake", duration: 70,
+    goal: "Build the container. Establish safety protocols. Introduce the Yellow/Red Light system. No content until the room is safe.",
+    content: "Before we begin any content, we need to build the container. Nothing in this program will require you to relive your trauma. You are here to understand how trauma works — not to perform your pain.",
+    keyPoints: ["Yellow Light / Red Light protocol", "Plan B handout distribution", "Confidentiality agreement", "3-2-1 grounding exercise", "The container is built before content begins"],
+    facilitatorNote: "This session is a pre-requisite. Do not skip. Do not shorten. Run at least 48 hours before Session 01."
+  },
+  { num: 1, title: "The Mechanism", subtitle: "Arc 1 — The Machine", arc: "arc1", arcLabel: "The Machine", duration: 75,
+    goal: "Show the exact pattern: high-functioning in chaos, freeze in normal life. Map the nervous system hijack.",
+    content: "The Architect thrives in chaos — sixteen-hour shifts, burning kitchens, pure fire. But the second the pressure drops, the system collapses. The same wiring that kept him alive in the Glass Box is the wiring still running the show.",
+    keyPoints: ["High-functioning in chaos / freeze in normal life", "Nervous system hijack pattern", "Prefrontal cortex goes offline under stress", "The Hum — constant low-grade alarm state", "Whiteboard: Stress → predator response → freeze → consequences → loop"],
+    facilitatorNote: "Walk to center. Feet planted. Calm, steady voice. Let silence hang 8-10 full seconds after the mechanism reveal."
+  },
+  { num: 2, title: "The Blueprint", subtitle: "Arc 1 — The Machine", arc: "arc1", arcLabel: "The Machine", duration: 75,
+    goal: "Show where the wiring started. The Glass Box. The Blanket Night. The original code.",
+    content: "The Architect didn't choose his nervous system. It was installed. 1982 — born three pounds, four ounces. Thirty days in a glass box. Alarms screaming. No touch. No comfort. Just survival. His nervous system learned its first lesson before he had a single word: The world is dangerous, and you are alone in the fight.",
+    keyPoints: ["Glass Box origin — NICU trauma architecture", "The Blanket Night — freeze response installed at age 6", "Blueprint: Glass Box (High Alert) + Blanket Night (Freeze)", "The code runs 40 years later when he sees a court envelope", "Wiring is not weakness — it is survival adaptation"],
+    facilitatorNote: "Matter-of-fact tone. Analytical. Draw the blueprint on the whiteboard in real time."
+  },
+  { num: 7, title: "The Disappearing Act", subtitle: "Arc 1 — The Machine", arc: "arc1", arcLabel: "The Machine", duration: 75,
+    goal: "Map the full shutdown sequence — how the crash becomes total disappearance and why the system thinks it's protecting.",
+    content: "The same six-year-old who hid under the blanket now takes over the entire system. The body does what it was wired to do when danger feels inescapable: disappear inside itself. No energy. No motivation. No connection. Just stillness. Just protection.",
+    keyPoints: ["Dorsal vagal shutdown — the disappearing act", "Glass Box + blanket → crash → isolation → total withdrawal", "Disappearance is the oldest survival code in the system", "The guy who ran a burning kitchen can't answer a text", "Naming the shutdown gives the prefrontal cortex one second of air"],
+    facilitatorNote: "Voice drops. Intense. Like you're revealing the final piece of a deadly machine."
+  },
+  { num: 8, title: "The Miss", subtitle: "Arc 1 — The Machine", arc: "arc1", arcLabel: "The Machine", duration: 75,
+    goal: "Show how the disappearing act turns into visible failure — missed court dates, FTAs, the moment the system physically cannot act.",
+    content: "The envelope is sitting on the counter. Court date in three days. He sees it. He knows the consequences. And he cannot open it. His hand won't move. His brain feels underwater — thick, slow, disconnected. The same freeze that saved him in the Glass Box now locks every muscle.",
+    keyPoints: ["FTAs — Failure to Appear as nervous system freeze", "Brain underwater — freeze response in real-world consequences", "The body screams: this is danger, this is a predator", "Not defiance — nervous system hijacking intentions", "The pattern stops being invisible and starts costing real things"],
+    facilitatorNote: "Voice drops low and intense. Lean in. Like you're laying out the moment the dominoes fall."
+  },
+  { num: 9, title: "The Loop", subtitle: "Arc 1 — The Machine", arc: "arc1", arcLabel: "The Machine", duration: 75,
+    goal: "Map the full repeating cycle: high performance → crash → disappear → miss → shame → repeat.",
+    content: "The Architect knows the pattern. He's lived it a hundred times. He gets the new job. Chaos hits. He locks in. Mask on. Runs the kitchen like a machine. Then the pressure drops. Crash. Isolation. The Miss. Shame. 'This time will be different.' The loop resets.",
+    keyPoints: ["High performance → crash → disappear → miss → shame → repeat", "Shame fuels the next round of overperformance", "The loop is the machine — not a character flaw", "Identifying the loop is the first step to interrupting it", "The pattern is predictable — which means it can be mapped"],
+    facilitatorNote: "Energy intense. Like you're mapping the point of no return. Leave the board up."
+  },
+  { num: 11, title: "The Body Keeps Score", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Reveal that the nervous system has its own memory — the body is still living in the Glass Box even when the mind says the danger is over.",
+    content: "The body never forgot the original wiring. Season 2 begins. We go under the hood. We find out why The Machine refuses to shut off even when the mind knows better.",
+    keyPoints: ["Somatic memory — the body stores what the mind tries to forget", "Nervous system still living in the Glass Box", "Physical sensations as data, not malfunction", "The chassis keeps the record", "Body-based regulation as the primary intervention"],
+    facilitatorNote: "Transition to Arc 2. Energy shifts — more analytical, less narrative. We're going under the hood."
+  },
+  { num: 12, title: "Trigger vs. Activation", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Show the critical difference between an outside event (trigger) and the body's automatic nervous-system response (activation).",
+    content: "Something tiny can flip the entire system in half a second. The trigger is outside. The activation is inside. Separating these two is the beginning of choice.",
+    keyPoints: ["Trigger = external event", "Activation = automatic nervous system response", "The split-second flip when the body takes over", "Naming the activation creates a gap for choice", "Trigger → activation → behavior is the chain to interrupt"],
+    facilitatorNote: "Precise. Clinical. Draw the trigger/activation split clearly on the whiteboard."
+  },
+  { num: 13, title: "The Threshold", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Reveal that The Crash doesn't come from one big event — it comes from quiet, invisible stress accumulation that finally crosses the line.",
+    content: "The crash doesn't announce itself. It accumulates. Small stressors stack. The threshold is invisible until it's crossed. Then everything overloads at once.",
+    keyPoints: ["Allostatic load — stress accumulation model", "The threshold is invisible until crossed", "Small stressors stack into system overload", "Recognizing pre-threshold warning signs", "Micro-regulation before the threshold is reached"],
+    facilitatorNote: "Methodical. Build the accumulation model step by step. Make the invisible visible."
+  },
+  { num: 14, title: "Fight, Flight, Freeze (Real World Version)", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Show how the three survival responses play out in daily life — and why The Architect defaults straight to freeze every single time.",
+    content: "Fight. Flight. Freeze. These aren't just survival responses — they're the operating system. And most people in this room default straight to freeze every single time, because that's what the Glass Box and the blanket night installed.",
+    keyPoints: ["Fight: anger, aggression, control as survival", "Flight: avoidance, escape, substance use as regulation", "Freeze: shutdown, dissociation, disappearing act", "Default response is wired, not chosen", "Identifying your default response is the first move"],
+    facilitatorNote: "High energy. Make it real. Use concrete daily-life examples, not clinical abstractions."
+  },
+  { num: 15, title: "The Pattern Veto", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Introduce The Pattern Veto — how The Machine learned to override its own internal alarms, and why that ability is a critical vulnerability.",
+    content: "The Pattern Veto is the moment you catch the old sequence starting to run and refuse to let it complete. It's not willpower. It's pattern recognition installed at the right moment.",
+    keyPoints: ["Pattern Veto = deliberate interruption of the old sequence", "Catching the pattern before the behavior completes", "One-second tools as interrupt mechanisms", "The prefrontal cortex needs one second of air", "Pattern recognition is a trainable skill"],
+    facilitatorNote: "This is the pivot session. Energy shifts from mapping the problem to installing the solution."
+  },
+  { num: 16, title: "Time Collapse", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Reveal how the past bleeds into the present — why 'now' suddenly feels exactly like 'then' and the nervous system treats a quiet Tuesday like the Glass Box.",
+    content: "Time Collapse: the mechanism does not register the event as memory. It treats it as current reality. The nervous system doesn't know it's 2024. It's still in 1982.",
+    keyPoints: ["Time Collapse = past threat treated as current reality", "The nervous system doesn't timestamp memories", "Triggers activate the original threat response", "Orienting to the present as a regulation tool", "Naming 'this is then, not now' creates separation"],
+    facilitatorNote: "Slow, deliberate. Let the concept land. Use the whiteboard to draw the timeline."
+  },
+  { num: 17, title: "The Permission Paradox", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Understand why requesting backup feels like surrender, and why The System trained you to run every load-bearing task alone.",
+    content: "The Permission Paradox: asking for help was never safe. The system learned to run everything alone. Now asking for backup triggers the same alarm as admitting weakness — which the original environment punished.",
+    keyPoints: ["Asking for help = vulnerability = danger (old code)", "Self-reliance as survival mechanism, not strength", "The cost of running everything alone", "Reframing help-seeking as operational intelligence", "Permission to need backup is a skill, not a weakness"],
+    facilitatorNote: "Personal. Direct. This session often hits hardest for veterans and corrections participants."
+  },
+  { num: 18, title: "The Control Circuit", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Examine The Control Circuit: the illusion of control as a load-management strategy, and what happens when it fails.",
+    content: "Control is the nervous system's attempt to make the unpredictable predictable. When the original environment was chaos, controlling everything felt like the only safety. The circuit still runs.",
+    keyPoints: ["Control as nervous system regulation strategy", "Hypervigilance as control mechanism", "The illusion of control vs. actual safety", "What happens when the control circuit fails", "Releasing control as a regulation skill"],
+    facilitatorNote: "Analytical. Map the control circuit on the whiteboard. Show the feedback loop."
+  },
+  { num: 19, title: "The Somatic Record", subtitle: "Arc 2 — The Drivers", arc: "arc2", arcLabel: "The Drivers", duration: 75,
+    goal: "Understand The Somatic Record: the chassis keeps the record — and the ledger never closes.",
+    content: "The body is the ledger. Every threat, every freeze, every survival move is recorded in the tissue. The mind forgets. The body doesn't. The somatic record is the most accurate account of what actually happened.",
+    keyPoints: ["Somatic memory — body as the primary record keeper", "The ledger: what worked before is stored as preferred code", "Physical symptoms as data from the somatic record", "Body-based interventions access the record directly", "The chassis keeps score when the mind won't"],
+    facilitatorNote: "Quiet. Reverent. This is the session where participants often feel seen for the first time."
+  },
+  { num: 20, title: "The Constructed Self", subtitle: "Arc 3 — The Interrupt", arc: "arc3", arcLabel: "The Interrupt", duration: 75,
+    goal: "Understand the difference between the survival shell you assembled and the actual driver underneath it.",
+    content: "The survival shell is not you. It is the armor the system built to get through the original environment. The driver underneath it has been there the whole time — waiting for the armor to become optional.",
+    keyPoints: ["Survival shell vs. authentic self", "The armor was necessary — and it's now optional", "Identity reconstruction after long-term trauma", "The driver has always been present", "Distinguishing survival adaptations from core identity"],
+    facilitatorNote: "Arc 3 begins. Energy shifts to reconstruction. The tone becomes more hopeful without losing precision."
+  },
+  { num: 21, title: "The Ghost Protocol", subtitle: "Arc 3 — The Interrupt", arc: "arc3", arcLabel: "The Interrupt", duration: 75,
+    goal: "Understand how old threat responses fire in low-threat environments — the invisible trigger mechanism.",
+    content: "The Ghost Protocol: old threat responses firing in safe environments. The ghost is the original threat — still running the alarm system in a world that no longer requires it.",
+    keyPoints: ["Ghost Protocol = old threat responses in safe environments", "The alarm system doesn't know the threat is gone", "Identifying ghost activations vs. real threats", "Orienting to safety as a skill", "The ghost is data, not reality"],
+    facilitatorNote: "Name the ghosts without dramatizing them. Clinical precision is more powerful than emotional intensity here."
+  },
+  { num: 22, title: "Trigger vs. Threat", subtitle: "Arc 3 — The Interrupt", arc: "arc3", arcLabel: "The Interrupt", duration: 75,
+    goal: "Distinguish between real danger and recycled pattern recognition — how to tell the difference in real time.",
+    content: "Not every trigger is a threat. The system can't tell the difference — but the driver can learn to. Real danger requires action. Recycled pattern recognition requires regulation.",
+    keyPoints: ["Trigger = pattern recognition from the past", "Threat = current real danger", "The body responds identically to both", "The driver learns to distinguish in real time", "Orienting check: is this now or then?"],
+    facilitatorNote: "Practical. Give concrete examples. Make the distinction usable, not theoretical."
+  },
+  { num: 23, title: "The Pattern Veto (Install)", subtitle: "Arc 3 — The Interrupt", arc: "arc3", arcLabel: "The Interrupt", duration: 75,
+    goal: "Master The Pattern Veto: the skill of catching the pattern before the behavior completes — the interrupt install.",
+    content: "The Pattern Veto is not willpower. It is a skill. It is installed through repetition. The one-second gap between trigger and response is where the driver lives.",
+    keyPoints: ["Pattern Veto = interrupt between trigger and response", "The one-second gap is the training ground", "Repetition installs the new response", "One-second tools: name it, breathe, feet on floor", "The interrupt is a skill, not a personality trait"],
+    facilitatorNote: "Drill the one-second tools. Make participants practice in the room. Embodied learning."
+  },
+  { num: 24, title: "The Stable Contact Blueprint", subtitle: "Arc 3 — The Interrupt", arc: "arc3", arcLabel: "The Interrupt", duration: 75,
+    goal: "Understand what a stable human connection looks like when your system was trained to expect ambush.",
+    content: "The Stable Contact Blueprint: what connection looks like when you've been trained to expect ambush. Stable contact is not the absence of conflict — it is the presence of repair.",
+    keyPoints: ["Stable contact = predictable, repairable connection", "Trauma-trained systems expect ambush in relationships", "The difference between conflict and ambush", "Repair as the core skill of stable contact", "Building a blueprint for what safety in connection feels like"],
+    facilitatorNote: "Gentle. This session often surfaces grief about relationships. Hold the container carefully."
+  },
+  { num: 25, title: "The Voice Rebuild", subtitle: "Arc 3 — The Interrupt", arc: "arc3", arcLabel: "The Interrupt", duration: 75,
+    goal: "Understand why finding your voice is the scariest thing in the room, and how to reprogram The System to allow authentic expression.",
+    content: "The voice was silenced because speaking was dangerous. The system learned: stay quiet, stay safe. The Voice Rebuild is the process of making authentic expression safe enough to risk.",
+    keyPoints: ["Voice silenced as survival mechanism", "Speaking as threat in the original environment", "Authentic expression vs. performance", "Building safety for the voice to emerge", "The voice rebuild is not about volume — it's about truth"],
+    facilitatorNote: "Create space. Don't rush. The voice emerges when the container is safe enough."
+  },
+  { num: 26, title: "Accountability Without Self-Destruction", subtitle: "Arc 4 — The Rebuild", arc: "arc4", arcLabel: "The Rebuild", duration: 75,
+    goal: "Integrate accountability into The System without triggering The Shame Spiral or The Crash.",
+    content: "Accountability without self-destruction: owning what happened without letting shame collapse the system. Responsibility is behavior-based. Shame is identity-based. Only one of them leads to repair.",
+    keyPoints: ["Shame = identity-based (I am bad)", "Accountability = behavior-based (I did something I can repair)", "The shame spiral: mistake → shame → shutdown → more mistakes", "Accountability without self-erasure", "Repair as the goal, not punishment"],
+    facilitatorNote: "Arc 4 begins. The tone is forward-moving. We are building, not just mapping."
+  },
+  { num: 27, title: "The Executive Function Restore", subtitle: "Arc 4 — The Rebuild", arc: "arc4", arcLabel: "The Rebuild", duration: 75,
+    goal: "Reboot The Driver's command center for planning, decision-making, and impulse control.",
+    content: "The prefrontal cortex — The Driver's command center — was suppressed by chronic stress. The Executive Function Restore is the process of bringing it back online through deliberate practice.",
+    keyPoints: ["Executive function = planning, decision-making, impulse control", "Chronic stress suppresses prefrontal function", "Rebuilding executive function through deliberate practice", "The Driver's command center coming back online", "Small decisions as executive function training"],
+    facilitatorNote: "Practical. Give concrete exercises. Make the rebuild tangible and achievable."
+  },
+  { num: 28, title: "The Code Rewrite", subtitle: "Arc 4 — The Rebuild", arc: "arc4", arcLabel: "The Rebuild", duration: 75,
+    goal: "Intentionally overwrite old, maladaptive programs with new, adaptive protocols.",
+    content: "The old code was written for survival in a world that no longer exists. The Code Rewrite is the deliberate installation of new protocols — not erasing the old code, but writing over it with something that works in the current environment.",
+    keyPoints: ["Old code = survival programs from the original environment", "New protocols = adaptive responses for the current world", "Neuroplasticity — the brain can rewrite its code", "Repetition installs new protocols", "The old code doesn't disappear — it gets overwritten"],
+    facilitatorNote: "Hopeful. Precise. This is the session where participants often feel the shift from victim to architect."
+  },
+  { num: 29, title: "The System Optimization", subtitle: "Arc 4 — The Rebuild", arc: "arc4", arcLabel: "The Rebuild", duration: 75,
+    goal: "Fine-tune The Machine for sustained resilience and adaptive capacity. Maintain new protocols and prevent system regression.",
+    content: "The System Optimization: The Machine is now running new protocols. The work now is maintenance — keeping the new code running under pressure, preventing regression, building adaptive capacity.",
+    keyPoints: ["Maintenance as ongoing practice, not one-time achievement", "Preventing regression under stress", "Building adaptive capacity", "The system is optimized, not cured", "Resilience as a dynamic, not a fixed state"],
+    facilitatorNote: "Steady. The energy here is operational — we are maintaining a system, not celebrating a finish line."
+  },
+  { num: 30, title: "The Integrated System", subtitle: "Arc 4 — The Rebuild", arc: "arc4", arcLabel: "The Rebuild", duration: 75,
+    goal: "Achieve The Integrated System: The Machine operating at peak resilience. The final architecture.",
+    content: "The Architect now navigates his world with a new architecture. The old code is still present, but it no longer dictates his operational flow. He is not cured — he is reprogrammed. He is The Driver of an Integrated System, not a passenger in a malfunctioning machine.",
+    keyPoints: ["The Integrated System = old code present but not in control", "The Driver is in command", "Adaptive capacity — learning from new data without regression", "Maintenance is continuous but the system is optimized", "You are not cured. You are reprogrammed. That's better."],
+    facilitatorNote: "This is the final session. The energy is earned. Let the room feel the weight of what they've done."
+  }
+];
+
+const SERIES_SESSIONS = [
+  { num: 0, title: "Introduction: What Really Happened", subtitle: "Setting the Compass for the Revolution", duration: 60,
+    goal: "Establish the framework of trauma-informed education.",
+    content: "This is not a support group. This is a trauma education series. We move from 'What is wrong with you?' to 'How did your system learn to survive?' The door remains unlocked. You have permission to leave, to breathe, and to regulate.",
+    handouts: ["The Window of Tolerance", "The Three Pillars of Safety"],
+    settings: ["Public Health", "VA"]
+  },
+  { num: 1, title: "The Load-Bearing Belief", subtitle: "I Am The Problem", duration: 60,
+    goal: "Identify the primary maladaptive belief.",
+    content: "To survive an unreliable world, a child's brain performs a trade: 'The world is fine — I am the problem.' This maintains the illusion of control. If I am the problem, I can fix myself to be safe.",
+    handouts: ["Identifying the Inner Critic", "Logic Loop Worksheet"],
+    settings: ["Clinical", "Peer Support"]
+  },
+  { num: 2, title: "The Masks We Wear", subtitle: "Fawning, Perfectionism & High-Functioning Survival", duration: 75,
+    goal: "Identify protective personas and examine how high-functioning survivors use fawning and perfectionism.",
+    content: "The fawn response and over-functioning are trauma-driven reflexes — not personality traits. The mask was built to survive. It costs everything to maintain.",
+    handouts: ["Fawn Response Inventory", "Perfectionism as Armor"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 3, title: "When Love Hurts", subtitle: "Trauma Bonds & Relational Re-enactment", duration: 75,
+    goal: "Explore how CPTSD disrupts attachment patterns, leading to trauma bonding and relational re-enactment.",
+    content: "Relationships mirror childhood chaos. The nervous system doesn't distinguish between good attachment and dangerous attachment — it only knows attachment equals survival.",
+    handouts: ["Trauma Bond Cycle Map", "Relational Re-enactment Patterns"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 4, title: "The War on Reality", subtitle: "Gaslighting, DARVO & Reality Distortion", duration: 75,
+    goal: "Focus on gaslighting, reality distortion, and mechanisms used to invalidate survivor testimony.",
+    content: "Gaslighting is identity erosion. DARVO — Deny, Attack, Reverse Victim and Offender — is the mechanism. Learning to name it in real time is how you reclaim your reality.",
+    handouts: ["DARVO Pattern Recognition", "Reality Anchoring Tools"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 5, title: "Relapse Isn't a Betrayal", subtitle: "Addiction as Nervous System Regulation", duration: 75,
+    goal: "Reframe addiction and relapse as regulation attempts rather than moral failures.",
+    content: "Relapse is dysregulation data. The substance was the regulation tool. Compassionate interruption strategies replace the tool — they don't shame the person who needed it.",
+    handouts: ["Regulation vs. Numbing Worksheet", "Compassionate Interruption Plan"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 6, title: "What Healing Actually Looks Like", subtitle: "Narrative Integration & the Window of Tolerance", duration: 75,
+    goal: "Develop a realistic non-linear model of recovery.",
+    content: "Healing is not a sunrise. It's not a moment when everything clicks. Healing is repeated small choices, body-based regulation, and narrative integration. It is slow, messy, and real.",
+    handouts: ["Window of Tolerance Map", "Non-Linear Recovery Timeline"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 7, title: "The Breaking Point", subtitle: "Recognizing Crisis & Personal Warning Signs", duration: 75,
+    goal: "Analyze conditions that lead to nervous system collapse and identify warning signs.",
+    content: "The breaking point doesn't come from nowhere. It comes from a sequence — stressors stacking, warning signs ignored, the threshold crossed. Mapping the sequence makes the breaking point visible before it arrives.",
+    handouts: ["Personal Escalation Sequence Map", "Early Warning Signs Inventory"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 8, title: "Rewriting the Legacy", subtitle: "Intergenerational Trauma & the Father Wound", duration: 75,
+    goal: "Investigate inherited trauma narratives and intergenerational patterning.",
+    content: "You may be carrying survival strategies that predate your own birth. Conscious naming of inherited scripts breaks the cycle repetition. You didn't choose the legacy — but you can choose what you pass on.",
+    handouts: ["Intergenerational Pattern Map", "Legacy Rewrite Exercise"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 9, title: "Shame vs. Responsibility", subtitle: "Identity-Level Shame vs. Behavior-Level Accountability", duration: 75,
+    goal: "Teach the difference between shame identity and behavior accountability.",
+    content: "Shame says 'I am a mistake.' Responsibility says 'I made a mistake — and I can do something different.' Shame fuels addiction. Accountability fuels repair. Only one of them leads forward.",
+    handouts: ["Shame vs. Accountability Worksheet", "Behavior-Based Accountability Language"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 10, title: "Your Brain on Trauma", subtitle: "Neurological Mechanics: Amygdala, Prefrontal Cortex & HPA Axis", duration: 75,
+    goal: "Explain trauma neurobiology in plain language.",
+    content: "Amygdala hijack. Prefrontal suppression. HPA dysregulation. These are adaptive survival learning — not brain damage. Understanding the mechanism removes the shame from the symptom.",
+    handouts: ["Brain Architecture Diagram", "Amygdala Hijack Recognition"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 11, title: "The Anatomy of a Spiral", subtitle: "Sequential Stages of Trauma Spirals & Entry Points", duration: 75,
+    goal: "Map the sequence of trauma spirals so interruption points become visible.",
+    content: "The spiral has stages. Trigger → activation → escalation → collapse → shame → reset. Each stage has an entry point for interruption. The earliest intervention is the most effective.",
+    handouts: ["Spiral Stage Map", "Interruption Point Inventory"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 12, title: "Crisis, Suicide Risk, and Staying Alive", subtitle: "Complete Facilitator Script", duration: 75,
+    goal: "Name suicidal-crisis mechanisms, keep group safety intact, and ensure every participant leaves with a completed safety reference.",
+    content: "Perceived burdensomeness is a symptom, not arithmetic, not fact. Staying is accumulated small decisions, not one dramatic choice. Every participant leaves this session with direct crisis resources and a personal safety reference.",
+    handouts: ["Personal Safety Reference", "Crisis Resources Card: 988 / 741741"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 13, title: "The Lessons Nobody Taught Us", subtitle: "Developmental Skills Interrupted by Trauma", duration: 75,
+    goal: "Identify trauma-literacy gaps and developmental skills interrupted by early trauma.",
+    content: "Trauma interrupts development. The skills that were never taught — regulation, boundaries, self-attunement, repair — can be learned now. Skill acquisition, not self-blame.",
+    handouts: ["Developmental Skills Inventory", "Skill Acquisition Plan"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 14, title: "Speaking Truth to Power", subtitle: "Naming Harm & Advocacy Language", duration: 75,
+    goal: "Practice naming harm accurately to institutions and develop advocacy language.",
+    content: "Naming harm clearly while protecting personal safety and dignity. Advocacy language that doesn't require you to perform your pain for institutions that were built to ignore it.",
+    handouts: ["Harm Naming Framework", "Advocacy Language Templates"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 15, title: "The Crucial Question", subtitle: "Meaning-Making & the Stigma Industrial Complex", duration: 75,
+    goal: "Engage meaning-making and construct a livable account of survival.",
+    content: "Stigma systems are designed to make you doubt your own experience. Meaning-making is the act of constructing a narrative that preserves your dignity and agency — without requiring anyone else's permission.",
+    handouts: ["Meaning-Making Framework", "Stigma Deconstruction Tool"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  },
+  { num: 16, title: "The Revolution Must Be Trauma-Informed", subtitle: "Systemic Design & Institutional Change", duration: 75,
+    goal: "Analyze institutional misreadings of trauma symptoms and define system-level reforms.",
+    content: "Institutions misread trauma symptoms as defiance, laziness, and non-compliance. The revolution is not just personal — it is systemic. Trauma-informed design is not a luxury. It is a requirement for any institution that claims to serve human beings.",
+    handouts: ["Institutional Misreading Map", "Trauma-Informed Design Principles"],
+    settings: ["NA/AA rooms", "Jails", "Residential rehabs", "VA peer groups"]
+  }
+];
+
+const LAWS = [
+  { num: 1, title: "Survival Is Wiring, Not Weakness", quote: "Born wired for war, not broken.", content: "Your nervous system is constantly scanning for danger — a process called neuroception. You didn't choose this. It was installed before you had words. The hypervigilance, the startle reflex, the inability to sit with your back to a door — these are survival adaptations, not personality defects.", application: "Don't fight the alarm. Name it: 'My wiring is detecting danger.' Orient: look around the room, find three square objects. Tell your brainstem: 'I see you. We are safe right now.'" },
+  { num: 2, title: "Trauma Is Inherited, Not Just Experienced", quote: "You carried ghosts before you had a name for them.", content: "Through epigenetic inheritance, trauma-related adaptations can be passed down across generations. Your grandmother's terror, your grandfather's rage, your mother's unspoken grief — these altered gene expression. You may be carrying survival strategies that predate your own birth.", application: "View your symptoms as clues, not flaws. If a behavior doesn't feel like yours, it might be inherited. Reframing the symptom as an ancestral strategy allows you to hold it with compassion and consciously choose to put it down." },
+  { num: 3, title: "A Dangerous Shelter Is Still a Shelter", quote: "You stay because leaving feels like dying.", content: "Your nervous system doesn't distinguish between good attachment and dangerous attachment — it only knows attachment equals survival. When a caregiver is both the source of terror and the only source of safety, the nervous system chooses attachment over safety every time.", application: "Understand why you stayed, why you went back, why you still protect them. It was survival logic, not stupidity. The work is building new attachment templates, not shaming the old ones." },
+  { num: 4, title: "Unprocessed Grief Becomes a Ghost", quote: "What you don't mourn will haunt you.", content: "Complex trauma doesn't just steal your childhood — it steals the person you might have been. When grief is not processed, it becomes somaticized — stored in the body as chronic pain, fatigue, or numbness. The ghost is the unprocessed loss.", application: "Give yourself permission to grieve what was taken — the childhood, the parent who should have been there, the years lost to survival. Grief is not weakness. It is integration." },
+  { num: 5, title: "Work Becomes the War You Can Win", quote: "If you can't control your life, control your work.", content: "When your home environment was unpredictable chaos, your nervous system channeled the high-energy fight response into high-stakes performance. Your hypervigilance becomes a superpower for crisis management. Work is the one arena where the rules are clear and effort produces results.", application: "Recognize work as a regulation strategy. It's not wrong — it kept you alive. The problem is when work becomes the only regulation tool. Build a broader toolkit." },
+  { num: 6, title: "Mother Wounds Don't Die with Mothers", quote: "The absence echoes louder than presence ever did.", content: "The mother wound is the internalized absence — the voice that was never there, the comfort that was withheld, the mirror that showed you wrong. It lives in the inner critic, the self-sabotage, the inability to receive care.", application: "The mother wound is not about blame. It is about understanding the origin of the inner critic's voice. When you hear 'you're not enough,' ask: whose voice is that? Then choose whether to keep listening." },
+  { num: 7, title: "The Fawn Response Is a Survival Mechanism, Not a Character Flaw", quote: "You learned to disappear to stay alive.", content: "The fawn response is people-pleasing as survival. When fight and flight were too dangerous, you learned to appease, accommodate, and make yourself small. This kept you safe. It is now costing you your identity.", application: "Notice when you are fawning — agreeing when you disagree, apologizing for existing, shrinking to manage someone else's emotions. Name it: 'This is fawn response.' Then ask: what do I actually need right now?" },
+  { num: 8, title: "Chaos Is Familiar, So You Create It", quote: "Dysfunction is a known language.", content: "The nervous system is not looking for happiness — it is looking for familiarity. If chaos was the baseline, calm feels wrong. The system will create drama, conflict, and crisis to return to the known state.", application: "When you find yourself creating chaos or drawn to chaotic situations, ask: is this familiar or is this actually what I want? The work is building a tolerance for calm — which feels dangerous at first." },
+  { num: 9, title: "You Will Betray Yourself Before Anyone Else Gets the Chance", quote: "The cruelest voice in your head is your own.", content: "Self-betrayal is preemptive protection. If you abandon yourself first, the rejection doesn't hurt as much. The inner critic is the internalized voice of every person who ever told you that you weren't enough.", application: "Catch the self-betrayal in real time. When you dismiss your own needs, minimize your own pain, or agree with someone who is wrong about you — name it: 'I just betrayed myself.' Then correct it." },
+  { num: 10, title: "Your Body Keeps Score When Your Mind Won't", quote: "The body remembers what the mind forgets.", content: "The body is the primary record keeper. Chronic pain, fatigue, digestive issues, autoimmune conditions — these are often the body's way of carrying what the mind has dissociated. The somatic record is the most accurate account of what actually happened.", application: "Start listening to the body as data, not malfunction. When physical symptoms appear, ask: what is the body trying to tell me? Body-based interventions — movement, breathwork, somatic experiencing — access the record directly." },
+  { num: 11, title: "Institutions Will Retraumatize You Unless You Know Your Wiring", quote: "The system wasn't built for people like us.", content: "Courts, hospitals, schools, prisons, welfare systems — these institutions were not designed with trauma in mind. They will misread your symptoms as defiance, non-compliance, and failure. Knowing your wiring is the only protection.", application: "Before entering any institutional setting, know your triggers, your regulation tools, and your rights. Have a Plan B. The institution's misreading of you is not the truth about you." },
+  { num: 12, title: "You Have Internal Parts That Are Still Fighting the Original War", quote: "You are not fragmented. You are organized for survival.", content: "Internal Family Systems, ego states, parts work — different names for the same phenomenon. The child who hid under the blanket, the teenager who raged, the adult who performs — these are all still present. They are not broken. They are organized for a war that ended.", application: "When a part takes over — the rage, the shutdown, the fawn — speak to it: 'I see you. I know why you're here. I've got this now.' The parts don't need to be eliminated. They need to be updated." },
+  { num: 13, title: "The Freeze Response Is Not Consent", quote: "Paralysis is not permission.", content: "The freeze response is a survival mechanism — not agreement, not weakness, not consent. When the system is overwhelmed, it shuts down. This is the dorsal vagal response. It is the oldest survival code in the nervous system.", application: "If you froze during a traumatic event, understand: your body was protecting you. The freeze was not a choice. It was not consent. It was survival. Releasing the shame of the freeze is part of the healing." },
+  { num: 14, title: "Dissociation Is a Feature, Not a Bug", quote: "Your mind left to protect you.", content: "Dissociation is the mind's emergency exit. When the experience is too overwhelming to process in real time, the mind disconnects. This is adaptive. It kept you functional when full presence would have destroyed you.", application: "When you notice dissociation — the fog, the unreality, the sense of watching yourself from outside — don't panic. Name it: 'My system is protecting me.' Then use grounding tools to return: feet on floor, name five things you can see." },
+  { num: 15, title: "Your Nervous System Has Been Hijacked", quote: "You are not broken. You are in a state of emergency.", content: "Chronic trauma puts the nervous system in a permanent state of emergency. The HPA axis is dysregulated. The window of tolerance is narrow. The system is running emergency protocols in non-emergency situations.", application: "Regulation is the primary intervention. Not insight, not willpower, not positive thinking — regulation. Breathwork, movement, cold water, co-regulation with safe people. The nervous system needs to learn that the emergency is over." },
+  { num: 16, title: "Shame Is the Glue That Holds Trauma in Place", quote: "You are not what happened to you.", content: "Shame is the mechanism that keeps trauma locked in place. As long as the experience is shameful, it cannot be processed. Shame says 'I am bad.' Guilt says 'I did something bad.' Only one of them allows for repair.", application: "When shame surfaces, name it: 'This is shame — not truth.' Then ask: what would I say to a friend who told me this happened to them? Extend that same compassion to yourself. Not as weakness — as the same mechanism you already use for everyone else." },
+  { num: 17, title: "Boundaries Are Not Walls; They Are Bridges", quote: "Saying no is an act of self-love.", content: "Trauma survivors often have no boundaries or rigid walls — nothing in between. Boundaries are not about keeping people out. They are about creating the conditions under which genuine connection is possible.", application: "Start with small boundaries. Notice what you actually want vs. what you agree to. Practice saying 'I need a moment' before responding. Boundaries are a skill — they are built through repetition, not declaration." },
+  { num: 18, title: "Burnout Is Your Body's Way of Saying 'No More'", quote: "Collapse is a message, not a failure.", content: "Burnout is not weakness. It is the body's final communication after all other signals have been ignored. The chronic overperformance, the inability to rest, the collapse — these are the body saying: the load is too heavy.", application: "When burnout hits, don't push through. The body is not broken — it is communicating. Rest is not laziness. It is the repair protocol. Build rest into the operational plan before the body forces it." },
+  { num: 19, title: "Rage Is Grief With Nowhere to Go", quote: "Your anger is sacred.", content: "Rage is not a character flaw. It is grief that has been denied its expression. When loss cannot be mourned, when injustice cannot be named, when pain has no witness — it becomes rage. The rage is not the problem. The lack of a container for grief is the problem.", application: "Give the rage a container: physical movement, writing, hitting a pillow. Then ask: what is the grief underneath this rage? What was lost? What was taken? The grief is the message. The rage is the messenger." },
+  { num: 20, title: "The Dark Night of the Soul Is Part of Healing", quote: "The darkness is not the end. It's the beginning.", content: "The dark night of the soul is the moment when the old survival strategies have stopped working and the new ones haven't been installed yet. It feels like collapse. It is actually transformation.", application: "If you are in the dark night, know: this is not the end. The old armor is coming off. The new self is not yet visible. Stay with the discomfort. Use your regulation tools. This is the most important moment in the healing arc." },
+  { num: 21, title: "You Cannot Fix What You Don't Acknowledge", quote: "Denial is the last line of defense.", content: "Denial is a survival mechanism — it kept you functional when the truth was too much to hold. But denial has a cost. What is not acknowledged cannot be healed. The truth, held with compassion, is the beginning of repair.", application: "Start with small acknowledgments. You don't have to face everything at once. Name one thing that is true that you have been avoiding. Hold it without judgment. That is the beginning." },
+  { num: 22, title: "Some Things Cannot Be Fixed, Only Accepted", quote: "Peace is not the absence of pain. It's the acceptance of it.", content: "Not everything can be repaired. Some losses are permanent. Some damage cannot be undone. Acceptance is not resignation — it is the decision to stop spending energy fighting what cannot be changed.", application: "Identify what you are still fighting that cannot be changed. Not to give up — but to redirect the energy. Acceptance frees the resources that were locked in resistance." },
+  { num: 23, title: "Healing Is Not Linear; It's Cyclical", quote: "You will spiral, and that's okay.", content: "Healing does not move in a straight line from broken to whole. It spirals — returning to the same material at deeper levels. What feels like regression is often integration at a new depth.", application: "When you find yourself back in familiar pain, don't interpret it as failure. Ask: what is this material showing me now that I couldn't see before? The spiral is the path, not a detour." },
+  { num: 24, title: "Healthy Relationships Require a Healthy Nervous System", quote: "You cannot pour from an empty cup.", content: "Trauma-trained nervous systems bring trauma-trained relational patterns into every relationship. Hypervigilance, fawn response, avoidant attachment, anxious attachment — these are not relationship problems. They are nervous system problems.", application: "Regulate before you relate. When you are activated, the relational brain goes offline. The work is building enough nervous system capacity to stay present in connection — especially when it gets hard." },
+  { num: 25, title: "Post-Traumatic Growth Is Real", quote: "What didn't kill you didn't just make you stronger. It made you wise.", content: "Post-traumatic growth is not about toxic positivity. It is the documented phenomenon of genuine transformation that can emerge from the work of healing. The capacity for empathy, the depth of insight, the refusal to be broken — these are real.", application: "Post-traumatic growth is not automatic. It requires doing the work. But the work is possible. And the growth that comes from it is not available to people who haven't been through the fire." },
+  { num: 26, title: "You Are Not Your Trauma; You Are What You Do With It", quote: "The story doesn't end here. It's just beginning.", content: "The trauma is part of the story — not the whole story. The wiring, the survival strategies, the losses — these are real. But they are not the final word. What you do with them is.", application: "You are the driver, not the passenger. The old code is still present — but you are learning to run the system. The story is not finished. The next chapter is being written right now." }
+];
+
+const GLOSSARY = [
+  { term: "Pattern Veto", def: "A deliberate interruption move used when a participant detects the old sequence starting to take control. The act of recognizing the mechanism in real time and refusing to let the inherited pattern run the next step without challenge." },
+  { term: "The Interrupt", def: "The phase of the curriculum focused on breaking automatic survival routines and installing replacement actions. The moment when the driver notices the system taking over and intervenes before the old code completes the loop." },
+  { term: "Micro-Regulation", def: "A small, repeatable regulation action used to lower system load without requiring a major reset. Examples: changing posture, pressing feet into the floor, lengthening the exhale, or naming the current mechanism before it accelerates." },
+  { term: "The System", def: "The full body-mind operating structure that carries old survival instructions, stress responses, and automatic behavior under pressure. In WRH, the system is treated as a mechanism that can be observed, mapped, and retrained." },
+  { term: "The Mechanism", def: "The specific way a pattern works from trigger to response to consequence. When facilitators explain the mechanism, they show how the sequence runs rather than judging the participant for the output." },
+  { term: "The Driver", def: "The conscious decision-making layer that can learn to observe the system, call out the pattern, and choose a different action. The driver is not always in control, but the curriculum is built to strengthen that control window." },
+  { term: "The Hum", def: "The low-grade internal alarm state that keeps the system scanning for pressure even when no immediate threat is visible. It functions like background engine vibration that never fully powers down." },
+  { term: "Threshold", def: "The point at which accumulated pressure exceeds the system's handling capacity and triggers automatic survival output. Once the threshold is crossed, reaction speed increases and choice narrows." },
+  { term: "The Loop", def: "A recurring pattern sequence in which trigger, reaction, consequence, and reinforcement keep feeding one another. WRH trains participants to identify loops early enough to interrupt them." },
+  { term: "Freeze", def: "A survival response in which the system prioritizes shutdown, immobility, or disappearance over confrontation or escape. WRH frames freeze as old code executing under load rather than as weakness or refusal." },
+  { term: "Dissociation", def: "A high-load protection response in which the system disconnects awareness from the immediate environment to reduce overload. The body remains present, but the driver's access to the moment is reduced or lost." },
+  { term: "Time Collapse", def: "A state in which the system reacts to present conditions as though an older threat is happening again right now. The mechanism does not register the event as memory; it treats it as current reality." },
+  { term: "Container", def: "The set of boundaries, pacing rules, and safety controls that keep the room stable enough for learning. The container protects instruction from drifting into chaos, disclosure pressure, or uncontrolled escalation." },
+  { term: "Ledger", def: "The internal record of what the system believes has worked before under pressure. If disappearance, shutdown, or self-protection once reduced danger, the ledger stores that result as preferred code." },
+  { term: "Glass Box", def: "The NICU incubator origin point — where the baseline nervous system wiring was installed before memory. High alert, isolation, and survival without comfort became the foundational operating system." },
+  { term: "The Architect", def: "The case study protagonist used throughout the WRH curriculum. A composite character whose patterns illustrate the mechanisms of CPTSD in real-world contexts: work, legal, relational, and somatic." },
+  { term: "CPTSD", def: "Complex Post-Traumatic Stress Disorder — trauma from prolonged, repeated exposure, often in childhood. Distinguished from single-incident PTSD by its pervasive impact on identity, relationships, and nervous system regulation." },
+  { term: "Fawn Response", def: "People-pleasing as survival. When fight and flight are too dangerous, the system learns to appease, accommodate, and make itself small. A fourth survival response alongside fight, flight, and freeze." },
+  { term: "Amygdala Hijack", def: "The moment the amygdala (threat detection center) overrides the prefrontal cortex (rational decision-making). The emotional brain takes control before the thinking brain can intervene." },
+  { term: "Neuroplasticity", def: "The brain's documented ability to form new neural connections and rewrite existing patterns through deliberate practice. The scientific basis for the WRH claim that the system can be retrained." }
+];
+
+// ============================================================
+// RENDER FUNCTIONS
+// ============================================================
+
+function renderWRHSessions(filter = 'all') {
+  const grid = document.getElementById('wrh-grid');
+  const arcColors = { intake: '#4ecdc4', arc1: '#e05555', arc2: '#c8a96e', arc3: '#7c6fe0', arc4: '#55c47a' };
+  const filtered = filter === 'all' ? WRH_SESSIONS : WRH_SESSIONS.filter(s => s.arc === filter);
+  
+  grid.innerHTML = filtered.map(s => `
+    <div class="session-card" onclick="openWRHModal(${s.num})">
+      <div class="session-num">Session ${String(s.num).padStart(2,'0')}</div>
+      <div class="session-title">${s.title}</div>
+      <div class="session-subtitle">${s.subtitle}</div>
+      <div class="session-goal">${s.goal}</div>
+      <div class="session-meta">
+        <span class="badge badge-arc" style="background: rgba(${arcColors[s.arc] ? '0,0,0' : '0,0,0'},0.1)">${s.arcLabel}</span>
+        <span class="badge badge-dur">${s.duration} min</span>
+        <span class="badge badge-series">WRH Pilot</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderSeriesSessions() {
+  const grid = document.getElementById('series-grid');
+  grid.innerHTML = SERIES_SESSIONS.map(s => `
+    <div class="session-card" onclick="openSeriesModal(${s.num})">
+      <div class="session-num">Session ${String(s.num).padStart(2,'0')}</div>
+      <div class="session-title">${s.title}</div>
+      <div class="session-subtitle">${s.subtitle}</div>
+      <div class="session-goal">${s.goal}</div>
+      <div class="session-meta">
+        <span class="badge badge-dur">${s.duration} min</span>
+        <span class="badge badge-series">WRH Series</span>
+        ${s.settings ? `<span class="badge" style="background: rgba(85,196,122,0.1); color: #55c47a; border: 1px solid rgba(85,196,122,0.3)">${s.settings[0]}</span>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderLaws() {
+  const grid = document.getElementById('laws-grid');
+  grid.innerHTML = LAWS.map(l => `
+    <div class="law-card" onclick="openLawModal(${l.num})">
+      <div class="law-num">Law #${l.num}</div>
+      <div class="law-title">${l.title}</div>
+      <div class="law-quote">${l.quote}</div>
+      <div class="law-content">${l.content.substring(0, 120)}...</div>
+    </div>
+  `).join('');
+}
+
+function renderGlossary() {
+  const grid = document.getElementById('glossary-grid');
+  grid.innerHTML = GLOSSARY.map(g => `
+    <div class="glossary-card">
+      <div class="glossary-term">${g.term}</div>
+      <div class="glossary-def">${g.def}</div>
+    </div>
+  `).join('');
+}
+
+function renderProgressTracker() {
+  const container = document.getElementById('progress-tracker');
+  const completed = JSON.parse(localStorage.getItem('wrh_completed') || '[]');
+  const total = WRH_SESSIONS.length;
+  const pct = Math.round((completed.length / total) * 100);
+  
+  container.innerHTML = `
+    <div class="progress-title">WRH Pilot Progress: ${completed.length} / ${total} sessions (${pct}%)</div>
+    <div class="progress-bar-wrap"><div class="progress-bar" style="width: ${pct}%"></div></div>
+    <div class="progress-label">Click any session card to mark it complete</div>
+    <div style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+      ${WRH_SESSIONS.map(s => `
+        <div onclick="toggleComplete(${s.num})" style="width: 32px; height: 32px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-family: Arial; background: ${completed.includes(s.num) ? 'rgba(85,196,122,0.3)' : 'var(--bg2)'}; border: 1px solid ${completed.includes(s.num) ? '#55c47a' : 'var(--border)'}; color: ${completed.includes(s.num) ? '#55c47a' : 'var(--text3)'}; transition: all 0.2s;" title="Session ${s.num}: ${s.title}">${s.num}</div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderSurvey() {
+  const questions = [
+    "I believe my struggles are a sign of personal weakness.",
+    "I understand why my nervous system reacts the way it does.",
+    "I feel ashamed of my past coping mechanisms.",
+    "I have tools to regulate myself when overwhelmed.",
+    "I believe I can change my patterns."
+  ];
+  const container = document.getElementById('survey-form');
+  container.innerHTML = `
+    <div style="font-size: 0.85rem; color: var(--text2); font-family: Arial; margin-bottom: 16px;">Rate 1 (strongly disagree) to 5 (strongly agree):</div>
+    ${questions.map((q, i) => `
+      <div style="margin-bottom: 16px;">
+        <div style="font-size: 0.85rem; color: var(--text); font-family: Arial; margin-bottom: 8px;">${i+1}. ${q}</div>
+        <div style="display: flex; gap: 8px;">
+          ${[1,2,3,4,5].map(n => `
+            <button onclick="rateSurvey(${i}, ${n}, this)" style="width: 36px; height: 36px; border-radius: 6px; background: var(--bg2); border: 1px solid var(--border); color: var(--text2); cursor: pointer; font-family: Arial; font-size: 0.85rem; transition: all 0.2s;" data-q="${i}" data-v="${n}">${n}</button>
+          `).join('')}
+        </div>
+      </div>
+    `).join('')}
+    <button onclick="submitSurvey()" class="reg-btn">Save Survey Results</button>
+    <div id="survey-result" style="margin-top: 12px; font-size: 0.85rem; color: var(--accent3); font-family: Arial;"></div>
+  `;
+}
+
+// ============================================================
+// MODAL FUNCTIONS
+// ============================================================
+
+function openWRHModal(num) {
+  const s = WRH_SESSIONS.find(x => x.num === num);
+  if (!s) return;
+  const completed = JSON.parse(localStorage.getItem('wrh_completed') || '[]');
+  const isDone = completed.includes(num);
+  
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-tag">WRH Pilot · Session ${String(num).padStart(2,'0')} · ${s.arcLabel} · ${s.duration} min</div>
+    <h2>${s.title}</h2>
+    <div class="modal-subtitle">${s.subtitle}</div>
+    <div class="modal-goal"><strong>Session Goal:</strong> ${s.goal}</div>
+    
+    <div class="modal-section">
+      <h3>Core Content</h3>
+      <div class="modal-quote">${s.content}</div>
+    </div>
+    
+    <div class="modal-section">
+      <h3>Key Points</h3>
+      <ul>${s.keyPoints.map(p => `<li>${p}</li>`).join('')}</ul>
+    </div>
+    
+    <div class="modal-section">
+      <h3>Facilitator Note</h3>
+      <p style="font-style: italic; color: var(--accent);">${s.facilitatorNote}</p>
+    </div>
+    
+    <div class="modal-section">
+      <h3>Regulation Anchor (Every Session)</h3>
+      <p>Yellow Light. Red Light. You run this room. Feet into the floor, blow out through the straw if your system lights up. Quick reset — feet flat, hand on chest, hand on belly. In for four… hold… out for six.</p>
+    </div>
+    
+    <div class="modal-tags">
+      <span class="badge badge-arc">${s.arcLabel}</span>
+      <span class="badge badge-dur">${s.duration} min</span>
+      <span class="badge badge-series">WRH Pilot</span>
+      <button onclick="toggleComplete(${num})" style="margin-left: auto; background: ${isDone ? 'rgba(85,196,122,0.2)' : 'rgba(124,111,224,0.2)'}; border: 1px solid ${isDone ? '#55c47a' : 'var(--accent2)'}; color: ${isDone ? '#55c47a' : 'var(--accent2)'}; padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-family: Arial;">${isDone ? '✓ Completed' : 'Mark Complete'}</button>
+    </div>
+  `;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function openSeriesModal(num) {
+  const s = SERIES_SESSIONS.find(x => x.num === num);
+  if (!s) return;
+  
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-tag">WRH Series · Session ${String(num).padStart(2,'0')} · ${s.duration} min</div>
+    <h2>${s.title}</h2>
+    <div class="modal-subtitle">${s.subtitle}</div>
+    <div class="modal-goal"><strong>Session Goal:</strong> ${s.goal}</div>
+    
+    <div class="modal-section">
+      <h3>Core Content</h3>
+      <div class="modal-quote">${s.content}</div>
+    </div>
+    
+    ${s.handouts ? `
+    <div class="modal-section">
+      <h3>Handouts</h3>
+      <ul>${s.handouts.map(h => `<li>${h}</li>`).join('')}</ul>
+    </div>` : ''}
+    
+    ${s.settings ? `
+    <div class="modal-section">
+      <h3>Settings</h3>
+      <div class="modal-tags">${s.settings.map(st => `<span class="badge badge-series">${st}</span>`).join('')}</div>
+    </div>` : ''}
+    
+    <div class="modal-section">
+      <h3>Standard Session Structure (30–35 min)</h3>
+      <ul>
+        <li>0:00–0:02 — Cold open: read the provided opening line</li>
+        <li>0:02–0:05 — Quick grounding: same script every time</li>
+        <li>0:05–0:15 — Core concept: read the case study content</li>
+        <li>0:15–0:22 — Mirror moment: recognition spike + question</li>
+        <li>0:22–0:27 — Rapid reframes: 4–6 reframes, fast delivery</li>
+        <li>0:27–0:32 — Open loop: name the behavior to watch for</li>
+        <li>0:32–0:35 — Cliffhanger: hook for next session</li>
+      </ul>
+    </div>
+  `;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function openLawModal(num) {
+  const l = LAWS.find(x => x.num === num);
+  if (!l) return;
+  
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-tag">26 Laws of Survival · Law #${l.num}</div>
+    <h2>${l.title}</h2>
+    <div class="modal-quote">${l.quote}</div>
+    
+    <div class="modal-section">
+      <h3>The Science & Mechanism</h3>
+      <p>${l.content}</p>
+    </div>
+    
+    <div class="modal-section">
+      <h3>Application</h3>
+      <p style="color: var(--accent);">${l.application}</p>
+    </div>
+    
+    <div class="modal-tags">
+      <span class="badge badge-series">The Wounded Blueprint</span>
+      <span class="badge" style="background: rgba(200,169,110,0.1); color: var(--accent); border: 1px solid rgba(200,169,110,0.3);">Law #${l.num} of 26</span>
+    </div>
+  `;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+// ============================================================
+// FILTER & SEARCH
+// ============================================================
+
+function filterWRH(arc, btn) {
+  document.querySelectorAll('#wrh-filters .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderWRHSessions(arc);
+}
+
+function searchSessions(query, type) {
+  const q = query.toLowerCase();
+  if (type === 'wrh') {
+    const grid = document.getElementById('wrh-grid');
+    const cards = grid.querySelectorAll('.session-card');
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(q) ? '' : 'none';
+    });
+  } else {
+    const grid = document.getElementById('series-grid');
+    const cards = grid.querySelectorAll('.session-card');
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(q) ? '' : 'none';
+    });
+  }
+}
+
+function searchLaws(query) {
+  const q = query.toLowerCase();
+  const grid = document.getElementById('laws-grid');
+  const cards = grid.querySelectorAll('.law-card');
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(q) ? '' : 'none';
+  });
+}
+
+// ============================================================
+// TAB SWITCHING
+// ============================================================
+
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  const idx = ['tab-wrh','tab-series','tab-laws','tab-glossary','tab-tools'].indexOf(tabId);
+  document.querySelectorAll('.tab')[idx].classList.add('active');
+}
+
+// ============================================================
+// PROGRESS TRACKER
+// ============================================================
+
+function toggleComplete(num) {
+  const completed = JSON.parse(localStorage.getItem('wrh_completed') || '[]');
+  const idx = completed.indexOf(num);
+  if (idx === -1) completed.push(num);
+  else completed.splice(idx, 1);
+  localStorage.setItem('wrh_completed', JSON.stringify(completed));
+  renderProgressTracker();
+  // Close modal if open
+  closeModalDirect();
+}
+
+// ============================================================
+// BREATHING TOOL
+// ============================================================
+
+let breathingActive = false;
+let breathInterval;
+
+function startBreathing() {
+  if (breathingActive) {
+    clearInterval(breathInterval);
+    breathingActive = false;
+    document.getElementById('breathe-circle').textContent = 'Start';
+    document.getElementById('breathe-circle').style.animation = 'breathe 4s ease-in-out infinite';
+    document.getElementById('breathe-text').textContent = 'Click the circle to begin guided breathing';
+    return;
+  }
+  
+  breathingActive = true;
+  const phases = [
+    { text: 'Breathe IN', duration: 4000, scale: 1.2 },
+    { text: 'HOLD', duration: 4000, scale: 1.2 },
+    { text: 'Breathe OUT', duration: 6000, scale: 0.9 },
+    { text: 'Rest', duration: 2000, scale: 1.0 }
+  ];
+  
+  let phaseIdx = 0;
+  const circle = document.getElementById('breathe-circle');
+  const textEl = document.getElementById('breathe-text');
+  
+  circle.style.animation = 'none';
+  
+  function runPhase() {
+    const phase = phases[phaseIdx];
+    circle.textContent = phase.text;
+    circle.style.transform = `scale(${phase.scale})`;
+    circle.style.opacity = phase.scale > 1 ? '1' : '0.7';
+    textEl.textContent = phase.text === 'Breathe IN' ? 'Inhale slowly through your nose...' :
+                          phase.text === 'HOLD' ? 'Hold gently...' :
+                          phase.text === 'Breathe OUT' ? 'Exhale slowly through pursed lips...' :
+                          'Notice the stillness...';
+    phaseIdx = (phaseIdx + 1) % phases.length;
+    breathInterval = setTimeout(runPhase, phase.duration);
+  }
+  
+  runPhase();
+}
+
+// ============================================================
+// SURVEY
+// ============================================================
+
+function rateSurvey(q, v, btn) {
+  document.querySelectorAll(`[data-q="${q}"]`).forEach(b => {
+    b.style.background = 'var(--bg2)';
+    b.style.borderColor = 'var(--border)';
+    b.style.color = 'var(--text2)';
+  });
+  btn.style.background = 'rgba(124,111,224,0.3)';
+  btn.style.borderColor = 'var(--accent2)';
+  btn.style.color = 'white';
+}
+
+function submitSurvey() {
+  const ratings = {};
+  document.querySelectorAll('[data-q]').forEach(btn => {
+    if (btn.style.background.includes('124,111,224')) {
+      ratings[btn.dataset.q] = parseInt(btn.dataset.v);
+    }
+  });
+  if (Object.keys(ratings).length < 5) {
+    document.getElementById('survey-result').textContent = 'Please rate all 5 questions before saving.';
+    return;
+  }
+  localStorage.setItem('wrh_survey_' + Date.now(), JSON.stringify(ratings));
+  document.getElementById('survey-result').textContent = '✓ Survey saved. Use this as your pre-session baseline.';
+}
+
+// ============================================================
+// INIT
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderWRHSessions();
+  renderSeriesSessions();
+  renderLaws();
+  renderGlossary();
+  renderProgressTracker();
+  renderSurvey();
+  
+  // Nav active state
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+  
+  // Keyboard close modal
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModalDirect();
+  });
+});
+</script>
+</body>
+</html>
