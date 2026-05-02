@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Really Happened – Understanding Complex PTSD | Trauma-Informed Education</title>
+    <meta name="description" content="16-part trauma-informed lecture series using Daniel Bret Lingar's memoir From the Storm to the Fire as a living case study. Free nervous system check-in tool + full curriculum PDF.">
+    <link rel="icon" href="favicon.ico">
+   
+    <!-- Open Graph -->
+    <meta property="og:title" content="What Really Happened – Understanding Complex PTSD">
+    <meta property="og:description" content="A raw, working-class journey through Complex PTSD. Memoir + 16 lectures + nervous system tools.">
+    <meta property="og:image" content="https://groundedcptsd.com/book-cover-final.jpg">
+    <meta property="og:url" content="https://groundedcptsd.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Really Happened – Understanding Complex PTSD">
+    <meta name="twitter:description" content="Trauma-informed education that speaks human, not clinical.">
+    <meta name="twitter:image" content="https://groundedcptsd.com/book-cover-final.jpg">
+   
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Understanding Complex PTSD - What Really Happened",
+        "description": "16-part trauma-informed lecture series with free nervous system check-in tool",
+        "url": "https://groundedcptsd.com",
+        "author": {
+            "@type": "Person",
+            "name": "Daniel Bret Lingar",
+            "jobTitle": "Author & Trauma Educator",
+            "description": "Bricklayer turned writer and educator specializing in trauma-informed education"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "What Really Happened",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://groundedcptsd.com/logo.png"
+            }
+        },
+        "mainEntity": {
+            "@type": "EducationalOccupationalProgram",
+            "name": "Complex PTSD Lecture Series",
+            "description": "Trauma-informed curriculum using memoir as case study",
+            "educationalCredentialAwarded": "Certificate of Completion",
+            "timeToComplete": "PT16H"
+        }
+    }
+    </script>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="preload" as="image" href="quote-graphic.jpg">
+    <link rel="preload" as="image" href="book-cover-final.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ember: '#ea580c',
+                        bronze: '#cd7f32',
+                        charcoal: '#0f0f0f',
+                        surface: '#1f2937',
+                        'gray-750': '#374151'
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'] 
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.7 },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <style>
+        /* Critical CSS */
+        body { 
+            background-color: #0f0f0f; 
+            color: #e5e7eb; 
+            font-family: 'Inter', sans-serif;
+        }
+        .section-padding { 
+            padding: 5rem 1rem; 
+        }
+        /* Accessibility */
+        *:focus-visible { 
+            outline: 2px solid #ea580c; 
+            outline-offset: 4px; 
+        }
+        .skip-link { 
+            position: absolute; 
+            top: -40px; 
+            left: 0; 
+            background: #ea580c; 
+            color: white; 
+            padding: 8px 16px; 
+            z-index: 100; 
+            transition: top 0.2s; 
+        }
+        .skip-link:focus { 
+            top: 0; 
+        }
+        .fade-in { 
+            animation: fadeIn 0.5s ease-in; 
+        }
+        @keyframes fadeIn { 
+            from { 
+                opacity: 0; 
+                transform: translateY(10px); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ea580c;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c2410c;
+        }
+        
+        /* Print styles */
+        @media print {
+            .no-print { display: none !important; }
+            body { 
+                color: #000 !important;
+                background: #fff !important;
+            }
+        }
+        
+        /* Gradient backgrounds */
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+        }
+        
+        /* Glow effect */
+        .glow {
+            box-shadow: 0 0 20px rgba(234, 88, 12, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+    <!-- Critical Safety Notice - PERSISTENT -->
+    <div class="bg-red-900/90 text-white text-center py-2 px-4 text-sm border-b border-red-700">
+        <svg class="inline-block h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+        </svg>
+        <strong>If you're in crisis:</strong> Please contact 
+        <a href="tel:988" class="underline font-bold hover:text-red-200">988 Suicide & Crisis Lifeline (US/Canada)</a> 
+        or your local emergency services. This site is educational, not therapeutic.
+    </div>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <header class="bg-black/90 backdrop-blur-md supports-backdrop-filter:bg-black/90 sticky top-0 z-50 border-b border-orange-900/30">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+            <a href="/" class="text-xl md:text-2xl font-black text-ember tracking-tight hover:text-white transition focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-black rounded">
+                What Really Happened
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide" aria-label="Main navigation">
+                <a href="/check-in" class="hover:text-ember transition focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1">Check-In Tool</a>
+                <a href="#lectures" class="hover:text-ember transition focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1">Lecture Series</a>
+                <a href="#memoir" class="hover:text-ember transition focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1">The Memoir</a>
+                <a href="#pricing" class="hover:text-ember transition focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1">Work With Me</a>
+                <a href="/about" class="hover:text-ember transition focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1">About Daniel</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-ember p-2 hover:bg-surface rounded focus:outline-none focus:ring-2 focus:ring-ember" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-orange-900/30" role="menu">
+            <nav class="flex flex-col p-4 space-y-4">
+                <a href="/check-in" class="block hover:text-ember py-2 border-b border-gray-700 focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-surface rounded px-2" role="menuitem">Check-In Tool</a>
+                <a href="#lectures" class="block hover:text-ember py-2 border-b border-gray-700 focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-surface rounded px-2" role="menuitem">Lecture Series</a>
+                <a href="#memoir" class="block hover:text-ember py-2 border-b border-gray-700 focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-surface rounded px-2" role="menuitem">The Memoir</a>
+                <a href="#pricing" class="block hover:text-ember py-2 border-b border-gray-700 focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-surface rounded px-2" role="menuitem">Work With Me</a>
+                <a href="/about" class="block hover:text-ember py-2 focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 focus:ring-offset-surface rounded px-2" role="menuitem">About Daniel</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="section-padding text-center gradient-bg">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="mb-8">
+                    <span class="text-bronze font-bold tracking-wider uppercase text-sm">Complex PTSD Education</span>
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 mt-4">
+                        If I ever tell you about my past,
+                        <span class="text-ember block mt-2">it's never because I want you to feel sorry for me,</span>
+                        but so you can understand why I am who I am.
+                    </h1>
+                </div>
+                
+                <!-- Why This Matters -->
+                <div class="max-w-3xl mx-auto mb-12">
+                    <div class="bg-surface/50 p-6 rounded-xl border-l-4 border-ember">
+                        <p class="text-lg leading-relaxed text-gray-300">
+                            <strong class="text-white">Why This Matters:</strong> Trauma doesn't live in stories—it lives in bodies. This project bridges the gap between clinical language and lived experience, giving you vocabulary for what your nervous system already knows. Because healing begins when we can name what happened.
+                        </p>
+                    </div>
+                </div>
+                
+                <img src="quote-graphic.jpg" 
+                     alt="Daniel Bret Lingar Quote - Working class trauma recovery" 
+                     loading="lazy" 
+                     width="800" 
+                     height="450"
+                     class="mx-auto my-12 max-w-2xl rounded-lg shadow-2xl border border-gray-800 bg-gray-900 animate-float"
+                     onerror="this.style.display='none'">
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#pricing" 
+                       class="px-8 py-4 bg-ember text-white text-lg font-bold rounded-lg hover:bg-orange-700 transition transform hover:-translate-y-1 shadow-lg shadow-orange-900/20 focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-black glow">
+                        Start Your Healing Journey
+                    </a>
+                    <a href="/about" 
+                       class="px-8 py-4 border-2 border-ember text-ember text-lg font-bold rounded-lg hover:bg-ember hover:text-white transition focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-black">
+                        Meet Daniel
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Section -->
+        <section class="py-12 bg-black border-y border-gray-800">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl font-bold text-center mb-8 text-gray-300">What Survivors & Professionals Say</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimonial for Bundle -->
+                    <div class="bg-surface/50 p-6 rounded-xl border border-gray-700">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-ember/20 rounded-full flex items-center justify-center text-ember font-bold text-xl">SJ</div>
+                            <div class="ml-4">
+                                <div class="font-bold text-white">Sarah J., Therapist</div>
+                                <div class="text-sm text-gray-400">Using with clients</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 italic">"Finally, a resource that speaks human, not clinical. The memoir-plus-lecture format gives my clients language for their experiences that therapy alone couldn't provide. This isn't just education—it's validation."</p>
+                        <div class="mt-4 flex text-amber-400">
+                            ★★★★★
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial for Mentorship -->
+                    <div class="bg-surface/50 p-6 rounded-xl border border-ember/30 glow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-ember/20 rounded-full flex items-center justify-center text-ember font-bold text-xl">MC</div>
+                            <div class="ml-4">
+                                <div class="font-bold text-white">Michael C.</div>
+                                <div class="text-sm text-gray-400">Group Mentorship Member</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 italic">"After 15 years of traditional therapy, Daniel's polyvagal approach finally made sense of my shutdown states. The weekly Q&As and community support have been life-changing. This work gets to the root in a way nothing else has."</p>
+                        <div class="mt-4 flex text-amber-400">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lecture Series -->
+        <section id="lectures" class="section-padding bg-surface">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <span class="text-bronze font-bold tracking-wider uppercase text-sm">Trauma-Informed Curriculum</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 mt-2">16-Part Lecture Series</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">Bridging personal narrative with trauma science, using real-life experience to educate, validate, and empower.</p>
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                    <div class="space-y-4">
+                        <img src="curriculum-page1.jpg" 
+                             alt="Printable Curriculum Page 1: Course Overview" 
+                             loading="lazy"
+                             width="600"
+                             height="848"
+                             class="rounded-lg shadow-2xl w-full">
+                        <img src="curriculum-page2.jpg" 
+                             alt="Printable Curriculum Page 2: Learning Outcomes" 
+                             loading="lazy"
+                             width="600"
+                             height="848"
+                             class="rounded-lg shadow-2xl w-full">
+                        <img src="curriculum-page3.jpg" 
+                             alt="Printable Curriculum Page 3: Session Breakdown" 
+                             loading="lazy"
+                             width="600"
+                             height="848"
+                             class="rounded-lg shadow-2xl w-full">
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-2xl font-bold mb-4 text-white">What's Inside the Free Curriculum</h3>
+                        <ul class="space-y-3 text-gray-300 mb-8">
+                            <li class="flex items-center"><span class="text-ember mr-2">✓</span>16 trauma-informed lectures with case study excerpts</li>
+                            <li class="flex items-center"><span class="text-ember mr-2">✓</span>Trauma science explanations and somatic exercises</li>
+                            <li class="flex items-center"><span class="text-ember mr-2">✓</span>Reflections, discussion questions, and APA references</li>
+                            <li class="flex items-center"><span class="text-ember mr-2">✓</span>Facilitator notes, content warnings, and assessment tools</li>
+                        </ul>
+                        <a href="lectures-curriculum.pdf" 
+                           download 
+                           class="inline-flex items-center px-8 py-3 bg-ember text-white font-bold rounded-lg hover:bg-orange-700 transition focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-surface">
+                            Download Free PDF
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Memoir -->
+        <section id="memoir" class="section-padding bg-black border-y border-gray-800">
+            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="text-bronze font-bold tracking-wider uppercase text-sm">The Living Case Study</span>
+                    <h2 class="text-4xl font-bold mb-6 mt-2">From the Storm to the Fire</h2>
+                    <p class="text-lg leading-relaxed text-gray-300 mb-6">This raw memoir anchors the lecture series—a working-class journey through Complex PTSD, addiction, and resilience, analyzed as a living case study.</p>
+                    <blockquote class="border-l-4 border-ember pl-4 italic text-gray-400 mb-6">
+                        "A gut punch of a memoir… devastating and luminous."
+                        <footer class="text-sm font-bold mt-2 text-bronze">— Cheryl Strayed, author of Wild</footer>
+                    </blockquote>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-ember mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">See the full story behind the work</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-ember mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">Understand the "why" behind complex trauma patterns</span>
+                        </div>
+                    </div>
+                    <a href="#pricing" 
+                       class="inline-block px-6 py-3 bg-ember text-white font-bold rounded-lg hover:bg-orange-700 transition focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-black">
+                        Get the Full Book
+                    </a>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="book-cover-final.jpg" 
+                         alt="From the Storm to the Fire – Bronze Man Rising Cover" 
+                         loading="lazy"
+                         width="300"
+                         height="450"
+                         class="rounded-xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition duration-500 glow">
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="section-padding bg-gradient-to-t from-black to-surface">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <div class="max-w-3xl mx-auto mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Choose Your Healing Path</h2>
+                    <p class="text-xl text-gray-400">Whether you need self-paced learning or guided community support, find the right fit for your journey.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Book + Lecture Bundle -->
+                    <div class="bg-surface p-8 rounded-2xl border border-gray-700 hover:border-ember transition group relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Most Affordable</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Book + Lecture Bundle</h3>
+                        <p class="text-gray-400 text-sm mb-6">Heal at Your Own Pace • Your Essential Self-Study Guide</p>
+                        <p class="text-5xl font-black mb-6 text-bronze">$47</p>
+                        <ul class="text-left space-y-4 text-gray-300 mb-8">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Full Digital Memoir: <em>From the Storm to the Fire</em></li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> All 16 Lecture Transcripts + Audio</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Worksheets & Somatic Exercises</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Nervous System Check-In Tool</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Lifetime Updates & Additions</li>
+                        </ul>
+                        <div class="mb-6 p-4 bg-gray-800/50 rounded-lg">
+                            <p class="text-sm text-gray-400"><span class="text-green-400 font-bold">30-Day Money-Back Guarantee:</span> If this isn't what you need, email for a full refund.</p>
+                        </div>
+                        <a href="https://buy.stripe.com/your-checkout-link" 
+                           class="block w-full py-4 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-surface">
+                            Buy Now • Instant Access
+                        </a>
+                    </div>
+                    
+                    <!-- Live Group Mentorship -->
+                    <div class="bg-ember p-8 rounded-2xl text-black transform md:scale-105 group relative glow">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">Most Transformative</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Live Group Mentorship</h3>
+                        <p class="text-orange-100 text-sm mb-6">Weekly Guided Support & Community • Direct Access for Faster Healing</p>
+                        <p class="text-5xl font-black mb-6">$197<span class="text-lg text-orange-900">/mo</span></p>
+                        <div class="mb-4 p-3 bg-white/20 rounded-lg">
+                            <p class="text-sm font-bold text-orange-900">⚠️ Limited to 12 participants per cohort • Next cohort starts March 15</p>
+                        </div>
+                        <ul class="text-left space-y-4 mb-8">
+                            <li class="flex items-start"><span class="text-black mr-2">✓</span> Weekly Q&A with <strong>Daniel Bret Lingar, MA</strong></li>
+                            <li class="flex items-start"><span class="text-black mr-2">✓</span> Private Community Access & Peer Support</li>
+                            <li class="flex items-start"><span class="text-black mr-2">✓</span> Advanced Polyvagal Tools & Workshops</li>
+                            <li class="flex items-start"><span class="text-black mr-2">✓</span> Live Nervous System Regulation Sessions</li>
+                            <li class="flex items-start"><span class="text-black mr-2">✓</span> Priority Email & Voice Message Support</li>
+                        </ul>
+                        <div class="mb-6 p-4 bg-white/20 rounded-lg">
+                            <p class="text-sm text-orange-900 font-bold">Cancel anytime • Pause option available</p>
+                        </div>
+                        <a href="/mentorship-application" 
+                           class="block w-full py-4 bg-white font-bold rounded-lg hover:bg-gray-100 transition focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2 focus:ring-offset-ember">
+                            Apply Now • Limited Spots
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Money-Back Guarantee Banner -->
+                <div class="max-w-2xl mx-auto mt-12 p-6 bg-gray-800/30 rounded-xl border border-gray-700">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="h-12 w-12 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">100% Risk-Free Investment in Your Healing</h3>
+                            <p class="text-gray-400">Both options come with a 30-day money-back guarantee. If this work isn't right for you, email us for a full refund—no questions asked.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Daniel Section -->
+        <section class="section-padding bg-black border-y border-gray-800">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <span class="text-bronze font-bold tracking-wider uppercase text-sm">About Your Guide</span>
+                <h2 class="text-3xl font-bold mb-6 mt-2">Meet Daniel Bret Lingar</h2>
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2 text-left">
+                        <p class="text-lg leading-relaxed text-gray-300 mb-6">
+                            A bricklayer turned writer and educator, Daniel brings working-class grit to trauma education. With a Master's in Clinical Psychology and lived experience of Complex PTSD, he bridges the gap between clinical theory and real-world survival.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 text-ember mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-300">MA in Clinical Psychology</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 text-ember mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-300">8+ years trauma education experience</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 text-ember mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-300">Specializes in polyvagal-informed approaches</span>
+                            </div>
+                        </div>
+                        <a href="/about" 
+                           class="inline-block mt-8 px-6 py-3 border-2 border-ember text-ember font-bold rounded-lg hover:bg-ember hover:text-white transition">
+                            Read Full Story
+                        </a>
+                    </div>
+                    <div>
+                        <div class="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-ember to-bronze p-1">
+                            <div class="w-full h-full rounded-full bg-black"></div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-400">(Photo of Daniel coming soon)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section-padding bg-surface">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Common Questions</h2>
+                <div class="space-y-6">
+                    <div class="bg-gray-800/50 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-2 text-white">Is this therapy or medical advice?</h3>
+                        <p class="text-gray-400">No. This is educational content about Complex PTSD and trauma recovery. It's designed to complement therapy, not replace it. Always consult with licensed healthcare providers for medical advice.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-2 text-white">How much time do I need each week?</h3>
+                        <p class="text-gray-400">The self-paced bundle requires 2-3 hours weekly. The mentorship includes weekly 90-minute group calls plus community interaction. Both are designed for busy adults.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-2 text-white">What if I can't afford either option?</h3>
+                        <p class="text-gray-400">We offer scholarships for those with financial need. Email daniel@groundedcptsd.com to inquire. The free curriculum PDF is always available to everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="/" class="text-xl font-black text-ember tracking-tight hover:text-white transition block mb-4">What Really Happened</a>
+                    <p class="text-gray-400 text-sm">Trauma-informed education for Complex PTSD survivors and professionals.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/check-in" class="hover:text-ember transition">Check-In Tool</a></li>
+                        <li><a href="#lectures" class="hover:text-ember transition">Free Curriculum</a></li>
+                        <li><a href="#memoir" class="hover:text-ember transition">The Memoir</a></li>
+                        <li><a href="/blog" class="hover:text-ember transition">Articles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Programs</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#pricing" class="hover:text-ember transition">Book + Lecture Bundle</a></li>
+                        <li><a href="#pricing" class="hover:text-ember transition">Group Mentorship</a></li>
+                        <li><a href="/workshops" class="hover:text-ember transition">Live Workshops</a></li>
+                        <li><a href="/for-professionals" class="hover:text-ember transition">For Therapists</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/about" class="hover:text-ember transition">About Daniel</a></li>
+                        <li><a href="mailto:daniel@groundedcptsd.com" class="hover:text-ember transition">Email Daniel</a></li>
+                        <li><a href="/contact" class="hover:text-ember transition">Contact Form</a></li>
+                        <li><a href="/privacy" class="hover:text-ember transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center">
+                <!-- Persistent Safety Notice in Footer -->
+                <div class="mb-6 p-4 bg-red-900/20 rounded-lg border border-red-800/30">
+                    <p class="text-sm text-gray-300">
+                        <strong class="text-white">Important:</strong> This website is for educational purposes only and not a substitute for professional mental healthcare. 
+                        If you're in crisis, please call <a href="tel:988" class="text-red-300 underline font-bold">988</a> (US/Canada) or your local emergency services.
+                    </p>
+                </div>
+                
+                <p class="text-xs text-gray-600">&copy; 2025 What Really Happened. All rights reserved. groundedcptsd.com</p>
+                <p class="text-xs text-gray-600 mt-2">Designed with trauma-informed principles in mind.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for mobile menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuButton = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    const isExpanded = mobileMenu.classList.toggle('hidden');
+                    menuButton.setAttribute('aria-expanded', !isExpanded);
+                    menuButton.classList.toggle('bg-surface');
+                });
+
+                // Close mobile menu when clicking links
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        menuButton.classList.remove('bg-surface');
+                    });
+                });
+            }
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
