@@ -1,53 +1,87 @@
-# Past Performance Narrative: [Pilot Name/Location]
-**Contractor:** Capitol Contracts LLC (UEI: HH77KN5AV5X7 / CAGE: 9ZFJ6)  
-**Program:** What Really Happened (WRH) Pilot Program – Season 1 (Part I)
+# Past Performance / Relevant Experience Narrative Template
+
+**Contractor:** Capitol Contracts LLC  
+**Program:** What Really Happened (WRH) Pilot Program  
+**Template Status:** Draft / verify before submission
+
+> **Compliance note:** Use this template only after verifying current ownership, role, certification, and program-status language.
+>
+> Capitol Contracts LLC has **not yet applied for SDVOSB certification** and should not be described as SDVOSB-certified, verified SDVOSB, approved SDVOSB, certified veteran-owned, or service-disabled veteran-owned unless certification is actually granted.
+>
+> **William Dane Lingar** is the veteran majority owner and executive control authority. **Daniel Bret Lingar is not a veteran** and should not be presented as veteran owner, SDVOSB owner, CEO, President, or final-control authority.
 
 ---
 
 ## 1. Project Overview
-**Client/Partner:** [Organization Name, e.g., Johnson County Recovery Center]  
+
+**Client/Partner:** [Organization Name]  
 **Period of Performance:** [Start Date] – [End Date]  
-**Value:** $1,500.00  
-**Setting:** [Recovery / Community Corrections / CCC / Private Sector]
+**Value:** [Dollar Value or No-Cost Pilot]  
+**Setting:** [Recovery / Reentry / Community / Veteran-Support / Private Sector / Other]  
+**Status:** [Relevant Experience / Pilot Experience / Completed Engagement]
 
 ### Scope of Work
-Capitol Contracts LLC delivered Part I (Season 1) of the "What Really Happened" (WRH) psychoeducational program. This 10-session engagement focused on introducing the **Wounded Blueprint** and establishing foundational pattern recognition for participants with histories of complex trauma and nervous system dysregulation.
+
+Capitol Contracts LLC delivered or supported a structured, non-clinical WRH psychoeducational pilot or implementation activity focused on pattern recognition, participant safety boundaries, facilitator structure, and practical education tools.
+
+Use accurate language based on the actual engagement. Do not overstate pilot size, outcomes, certification status, or clinical impact.
 
 ---
 
-## 2. Performance Metrics & Outcomes
+## 2. Performance Metrics and Implementation Indicators
 
-### Engagement & Retention
+### Engagement and Retention
+
 - **Initial Enrollment:** [Number] participants
 - **Program Completion:** [Number] participants
 - **Completion Rate:** [Percentage]%
 - **Average Attendance:** [Number] sessions per participant
+- **Facilitator Sessions Delivered:** [Number]
 
-### Clinical/Behavioral Impact (Pre/Post CPTSD Quiz)
-- **Baseline Regulation Score (Avg):** [Score]
-- **Post-Program Regulation Score (Avg):** [Score]
-- **Net Improvement:** [Percentage]% increase in self-reported regulation capability.
-- **Key Observation:** [e.g., 80% of participants identified 'Freeze' as their primary maladaptive pattern by Session 4].
+### Learning / Reflection Indicators
 
----
+Use only non-clinical measures unless a qualified partner provides validated measures under appropriate oversight.
 
-## 3. Participant Feedback (Anonymous)
-> "[Insert Quote 1: Focus on pattern recognition, e.g., 'I finally understand why I shut down when I'm stressed.']"
-
-> "[Insert Quote 2: Focus on safety/delivery, e.g., 'This was the first time I didn't feel forced to talk about my past to get help.']"
+- **Pre/Post Reflection Tool Used:** [Yes/No]
+- **Participant Understanding Shift:** [Summary]
+- **Common Pattern Recognition Gains:** [Summary]
+- **Participant Feedback Themes:** [Summary]
 
 ---
 
-## 4. Technical Narrative & Methodology
-Capitol Contracts utilized its proprietary **Wounded Blueprint** methodology to map session content directly to the nervous system patterns of the participant cohort. By employing a case-study-driven "Mechanism Breakdown" approach, the program successfully bypassed common defensive barriers found in justice-involved and high-trauma populations.
+## 3. Participant or Partner Feedback
+
+Use anonymous feedback unless written permission is obtained.
+
+> "[Insert anonymous participant or partner quote.]"
+
+> "[Insert anonymous participant or partner quote.]"
+
+---
+
+## 4. Technical Narrative and Methodology
+
+Capitol Contracts LLC used a non-clinical, mechanism-first education model to teach survival-pattern recognition, executive-function disruption concepts, shame-cycle interruption language, and participant safety boundaries.
+
+The WRH model is designed to avoid forced trauma disclosure and to support structured facilitator delivery in real-world environments.
 
 ### Risk Mitigation
-The "Plan B Protocol" was active throughout the pilot. There were [Zero/Number] safety incidents or re-traumatization reports during the period of performance, validating the low-risk, high-engagement model required for federal-scale deployment.
+
+Document only what actually occurred.
+
+- **Participant safety protocol used:** [Yes/No]
+- **Forced disclosure avoided:** [Yes/No]
+- **Host-site escalation procedure available:** [Yes/No]
+- **Reported safety incidents:** [Number / Unknown / Not tracked]
+- **Facilitator debrief completed:** [Yes/No]
 
 ---
 
 ## 5. Conclusion
-This pilot successfully demonstrated the scalability and efficacy of the WRH Part I curriculum in a [Type of Environment] setting. The results provide a verified foundation for subsequent seasons and larger-scale federal integration.
+
+This engagement demonstrated [specific, verified result].
+
+Avoid claiming clinical efficacy, federal approval, SDVOSB status, or broad outcome proof unless those claims are documented and verified.
 
 **Verified By:**  
 [Name of Client Representative]  
