@@ -1,55 +1,87 @@
-**This document governs what gets fixed first before serious federal pursuit; if a future version of me wants to skip these steps, they’re wrong.**
+# Contractor Readiness Gap Analysis & Implementation Roadmap — ARCHIVE / REVIEW BEFORE USE
 
-# Contractor Readiness Gap Analysis & Implementation Roadmap
 **Date:** April 14, 2026  
-**Status:** Strategic Governance Document
+**Status:** Strategic Governance Document / Legacy Draft
+
+> **Compliance note:** This document is retained for historical planning reference. Before public use, proposal use, or certification use, verify all ownership, role, certification, NAICS, PSC, and program-status language against current records.
+>
+> Capitol Contracts LLC has **not yet applied for SDVOSB certification** and should not be described as SDVOSB-certified, verified SDVOSB, approved SDVOSB, certified veteran-owned, or service-disabled veteran-owned unless certification is actually granted.
+>
+> **William Dane Lingar** is the veteran majority owner and executive control authority. **Daniel Bret Lingar is not a veteran** and should not be presented as veteran owner, SDVOSB owner, CEO, President, or final-control authority.
 
 ## 1. Executive Summary
-This document outlines the leanest path to federal contracting readiness for Capitol Contracts LLC. It prioritizes regulatory compliance, evidence generation, and content synchronization to ensure the "What Really Happened" (WRH) program is positioned for serious federal pursuit.
+
+This document outlines a lean path toward federal contracting readiness for Capitol Contracts LLC. It prioritizes regulatory accuracy, evidence generation, content synchronization, and role/certification consistency.
 
 ## 2. Immediate Capability Statement Updates
-The following updates must be reflected in all capability assets (website, 1-pager, SAM.gov profile):
+
+The following updates should be reflected in capability assets, website language, public repository documents, and partner-facing materials only after verification.
 
 ### Government Data Block
+
 - **UEI:** HH77KN5AV5X7
 - **CAGE:** 9ZFJ6
-- **NAICS:** 611710 (Educational Support), 611430 (Professional/Mgmt Development), 624190 (Individual/Family Services)
-- **PSC:** U009 (Education/Training - General), U099 (Other Ed/Training), U093 (Vocational/Technical), R699 (Other Support - Admin)
+- **Primary NAICS:** 611710 — Educational Support Services
+- **Additional NAICS / PSC:** verify before reuse
+- **SDVOSB Status:** Not applied / not certified
 
-### Core Competencies: The Wounded Blueprint
-Explicitly name the **Wounded Blueprint** as core IP: "Session-by-session mapping of WRH to nervous-system patterns."
+### Ownership and Control Block
 
-### Narrative Depth & Advocacy
-Add section header and bullets for:
-- **Outlaw Gospel**
-- **Trauma-Informed Courts Act draft**
-- **#SurvivalIsNotACrime**
+Use consistent role language:
 
-### Ancillary Technical & Vocational Solutions
-Rename electronics/repair/smart-home services to **Ancillary Technical & Vocational Solutions**. Tie these directly to reentry and vocational skills development.
+- **William Dane Lingar:** Majority Owner / CEO / President / Final Decision Authority
+- **Daniel Bret Lingar:** Director of Operations / Technical Lead / Curriculum Development Support
+
+Do not describe Daniel Bret Lingar as veteran, service-disabled veteran, veteran owner, SDVOSB owner, CEO, President, controlling owner, or final decision authority.
+
+### Program Language
+
+Keep program language non-clinical and education-focused:
+
+- structured psychoeducational materials
+- curriculum development
+- facilitator support
+- implementation documentation
+- pattern-recognition education
+- non-clinical support tools
+
+Avoid unverified treatment, clinical, certification, or outcome claims.
 
 ## 3. Non-Optional Checklist
 
-### Phase 1: Regulatory Completion
-1. **DD-214:** Obtain Dane’s DD-214.
-2. **HUBZone:** File HUBZone certification using the Clarksville address and HUBZone residency requirements.
-4. **Synchronization:** Upon clearance, update SAM.gov, website, and email signatures.
+### Phase 1: Regulatory and Documentation Completion
 
-### Phase 2: Evidence Generation (The Pilots)
-Land **two $1,500 Part I pilots** (one in recovery, one in community corrections/CCC). For each pilot, produce:
-- Enrollment vs. completion numbers.
-- Pre/post CPTSD quiz results.
-- Anonymous participant feedback.
-- 2-page past-performance narrative.
-- **Storage:** Upload narratives to SAM and store in repo under `past_performance/`.
+1. Verify DD-214 and veteran-status documentation for William Dane Lingar.
+2. Verify ownership/control documents and ensure all public-facing language matches actual company structure.
+3. Prepare SDVOSB/VetCert pathway materials before making any SDVOSB claim.
+4. Do not claim SDVOSB status until certification is granted.
+5. Synchronize SAM.gov, website, capability statement, repository documents, and outreach materials only after role/certification language is verified.
 
-### Phase 3: Content Sync & Definitions
-Ensure short, crisp definitions for the following appear in the capability statement, WRH README, and federal decks:
-- **Wounded Blueprint:** The proprietary mapping of trauma to nervous system patterns.
-- **Trauma-Informed Courts Act concept:** Legislative framework for trauma-aware judicial processes.
-- **Outlaw Gospel:** Narrative advocacy for the marginalized.
-- **#SurvivalIsNotACrime:** Advocacy campaign for trauma-informed justice.
-- **Ancillary Technical & Vocational Solutions:** Vocational training tied to reentry success.
+### Phase 2: Evidence Generation
+
+Land and document small pilot engagements before relying on past-performance claims.
+
+For each pilot, preserve:
+
+- enrollment vs. completion numbers
+- attendance or participation indicators
+- anonymous participant feedback
+- facilitator implementation notes
+- partner feedback
+- a short past-performance narrative clearly marked as relevant experience or pilot experience
+
+### Phase 3: Content Sync and Definitions
+
+Ensure short, consistent definitions appear across the capability statement, WRH README, pilot package, and partner materials:
+
+- **WRH:** non-clinical psychoeducational pattern-recognition curriculum
+- **Plan B Protocol:** participant support and pause/exit structure for moments of overload
+- **Non-Disclosure Model:** education format that does not require participants to recount personal trauma histories
+- **Facilitator Standardization:** structured delivery supports for consistent implementation
+- **Pattern Recognition:** learning to notice repeated behavioral or nervous-system sequences before they escalate
 
 ## 4. Conclusion
-No further strategy is required at this time. Success depends on the completion of filings, the execution of the two pilots, and the documentation of past performance.
+
+This document should function as a historical readiness roadmap, not as a live certification claim.
+
+Success depends on accurate ownership/control language, verified filings, pilot documentation, and consistent public materials.
